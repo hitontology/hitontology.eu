@@ -1,14 +1,15 @@
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              https://hyde.getpoole.com
+title:            HITO
+tagline:          'A Health IT Ontology'
+description:      'A Health IT Ontology for systematically describing application systems and software products in health IT. By <a href="" target="_blank">IMISE</a> and <a href="" target="_blank">UMIT</a>.'
+url:              http://hyde.getpoole.com
 baseurl:          ''
-paginate:         5
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Konrad Höffner'
+  url:            https://github.com/KonradHoeffner
 
 # Custom vars
-version:          3.0.0
+
+github:
+  repo:           https://github.com/hito/hitontology
