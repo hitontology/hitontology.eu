@@ -13,7 +13,10 @@ author:
 # Custom vars
 
 github:
-  repo:           https://github.com/hitontology
+  org:           https://github.com/hitontology
 
 socialmedia:
   twitter: https://twitter.com/hitontology
+
+internal:
+  owncloud:  https://denethor.imise.uni-leipzig.de/index.php/apps/files?dir=/Shared/HITO/

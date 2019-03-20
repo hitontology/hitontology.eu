@@ -4,27 +4,11 @@ title: About
 order: 10
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+The goal of this project is to develop a Health IT Ontology (HITO) that allows systematically describing application systems and software products in health IT.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+Our motivation is that information management professionals have a strong need to share and compare knowledge about health IT in several situations.
+These situations are, among others, to describe the components of a health information system as part of its strategic or operational management, to select a new software product, to learn about available evidence regarding an application, or to hire or train health IT specialists.
 
-There are currently two themes built on Poole:
-
-* [Hyde](https://hyde.getpoole.com)
-* [Lanyon](https://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](https://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Atom](https://atom.io)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+However, at the moment, health IT descriptions are not easily comparable.
+Thus, based on these needs, our motivation is to develop a Health IT Ontology allowing a systematic description of application systems and software products within health information systems (HIS).
+This will allow easier sharing of knowledge and experiences, support better cooperation when planning and operating HIS and allow evidence-based decision making in information management in health care.
