@@ -1,3 +1,4 @@
+permalink:        pretty
 # Setup
 title:            HITO
 tagline:          'A Health IT Ontology'
@@ -13,3 +14,6 @@ author:
 
 github:
   repo:           https://github.com/hitontology
+
+socialmedia:
+  twitter: https://twitter.com/hitontology
