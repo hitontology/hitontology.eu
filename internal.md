@@ -4,10 +4,11 @@ title: Internal
 order: 35
 ---
 
-## OwnCloud
-[Link to our OwnCloud]({{ site.internal.owncloud }})
 
-## Slack
+### A collection of links to our internal workspaces and applications
 
+* [OwnCloud]({{ site.internal.owncloud }})
 
-## Conductor
+* [Slack Workspace]({{ site.internal.slack }})
+
+* Conductor (not linked yet)

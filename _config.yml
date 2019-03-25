@@ -7,8 +7,8 @@ url:              https://hitontology.eu
 baseurl:          ''
 
 author:
-  name:           'Konrad Höffner'
-  url:            https://github.com/KonradHoeffner
+  name:           'Konrad Höffner & Thomas Pause'
+  url:            https://github.com/KonradHoeffner , https://github.com/ThomasPause
 
 # Custom vars
 
@@ -20,3 +20,4 @@ socialmedia:
 
 internal:
   owncloud:  https://denethor.imise.uni-leipzig.de/index.php/apps/files?dir=/Shared/HITO/
+  slack:     https://hito-project.slack.com/
