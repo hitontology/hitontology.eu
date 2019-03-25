@@ -6,18 +6,24 @@ order: 80
 
 ## Project Leaders
 
-[Alfred Winter]({{ site.links.winter }})<br>
+<div style="display:grid;align-items:center;grid-template-columns: 10em 10em;grid-gap:1em;">
+<div class="inbox">
+<a href="{{ site.links.winter}}">Alfred Winter</a><br>
 Leipzig, Germany<br>
 permanent professor<br>
-
-[<img src="{{site.baseurl}}/public/imise-logo.svg" style="height:2em">]({{ site.links.imise }})<br>
-
-[Elske Ammenwerth]({{ site.links.ammenwerth }})<br>
+</div>
+<div class="inbox">
+<a href="{{ site.links.imise }}"><img src="{{site.baseurl}}/public/imise-logo.svg" style="height:4.5em"></a>
+</div>
+<div class="inbox">
+<a href="{{ site.links.ammenwerth }}">Elske Ammenwerth</a><br>
 Hall in Tirol, Austria<br>
 permanent professor<br>
-
-[<img src="{{site.baseurl}}/public/umit-logo.svg" style="height:2em">]({{ site.links.umit }})<br>
-
+</div>
+<div class="inbox">
+<a href="{{ site.links.umit }}"><img src="{{site.baseurl}}/public/umit-logo.svg" style="height:4.5em"></a>
+</div>
+</div>
 ## Webmaster
 
 Thomas Pause and Konrad Höffner<br>
