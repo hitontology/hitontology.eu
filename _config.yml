@@ -21,3 +21,9 @@ socialmedia:
 internal:
   owncloud:  https://denethor.imise.uni-leipzig.de/index.php/apps/files?dir=/Shared/HITO/
   slack:     https://hito-project.slack.com/
+
+links:
+  imise:     https://imise.uni-leipzig.de/
+  umit:      https://umit.at/
+  winter:    http://www.people.imise.uni-leipzig.de/alfred.winter/
+  ammenwerth: https://www.umit.at/page.cfm?vpath=departments/technik/iig/

@@ -1,20 +1,22 @@
 ---
 layout: page
-title: Contact 
-order: 80 
+title: Contact
+order: 80
 ---
 
 ## Project Leaders
 
-Alfred Winter<br>
+[Alfred Winter]({{ site.links.winter }})<br>
 Leipzig, Germany<br>
 permanent professor<br>
-E-mail: ...
 
-Elske Ammenwerth<br>
-Hall i. T., Austria<br>
+[<img src="{{site.baseurl}}/public/imise-logo.svg" style="height:2em">]({{ site.links.imise }})<br>
+
+[Elske Ammenwerth]({{ site.links.ammenwerth }})<br>
+Hall in Tirol, Austria<br>
 permanent professor<br>
-E-mail: ...
+
+[<img src="{{site.baseurl}}/public/umit-logo.svg" style="height:2em">]({{ site.links.umit }})<br>
 
 ## Webmaster
 
