@@ -21,6 +21,7 @@ socialmedia:
 internal:
   owncloud:  https://denethor.imise.uni-leipzig.de/index.php/apps/files?dir=/Shared/HITO/
   slack:     https://hito-project.slack.com/
+  googledrive: https://drive.google.com/drive/folders/1vvBFwDhE9S1Mm3i317KjubNdLsW1iCJU
 
 links:
   imise:     https://imise.uni-leipzig.de/
