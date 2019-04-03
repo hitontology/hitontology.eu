@@ -26,6 +26,15 @@ permanent professor<br>
 <a href="{{ site.links.umit }}"><img src="{{site.baseurl}}/public/umit-logo.svg" style="height:4.5em"></a>
 </div>
 </div>
+
+## Project Team
+
+* Konrad Höffner
+* Franziska Jahn
+* Birgit Schneider
+* Maryam Ghalandari
+* Verena Dornauer 
+
 ## Webmaster
 
 Thomas Pause and Konrad Höffner<br>
