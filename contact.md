@@ -5,9 +5,8 @@ order: 80
 ---
 
 ## Project Leaders
-
-<div style="display:grid;align-items:center;grid-template-columns: 9em 10em 10em;grid-gap:1em;">
-<img src="{{ site.baseurl}}/public/winter.jpg" style="height:5em">
+<div style="display:grid;align-items:center;grid-template-columns: 8em 10em 10em;grid-gap:1em;" class="teamGrid">
+<img src="{{ site.baseurl}}/public/winter.jpg">
 <div class="inbox">
 <a href="{{ site.links.winter}}">Alfred Winter</a><br>
 Leipzig, Germany<br>
@@ -28,12 +27,68 @@ permanent professor<br>
 </div>
 
 ## Project Team
+<div style="display:grid;align-items:center;grid-template-columns: 8em 10em 10em;grid-gap:1em;" class="teamGrid">
+<img src="{{ site.baseurl}}/public/hoeffner.jpg" style="height:5em">
+<div class="inbox">
+<a href="{{ site.links.hoeffner}}">Konrad Höffner</a><br>
+Leipzig, Germany<br>
+Webmaster, Ontologist, Programmer<br>
+</div>
+<div class="inbox">
+<a href="{{ site.links.imise }}"><img src="{{site.baseurl}}/public/imise-logo.svg" style="height:4.5em"></a>
+</div>
 
-* Konrad Höffner
-* Franziska Jahn
-* Birgit Schneider
-* Maryam Ghalandari
-* Verena Dornauer 
+<img src="{{site.baseurl}}/public/jahn.jpg" style="height:5em">
+<div class="inbox">
+<a href="{{ site.links.jahn }}">Franziska Jahn</a><br>
+Leipzig, Germany<br>
+Project Coordinator<br>
+</div>
+<div class="inbox">
+<a href="{{ site.links.imise }}"><img src="{{site.baseurl}}/public/imise-logo.svg" style="height:4.5em"></a>
+</div>
+
+<img src="{{ site.baseurl}}/public/schneider.jpg" style="height:5em" alignment="center">
+<div class="inbox">
+<a href="{{ site.links.schneider }}">Birgit Schneider</a><br>
+Leipzig, Germany<br>
+Ontologist<br>
+</div>
+<div class="inbox">
+<a href="{{ site.links.imise }}"><img src="{{site.baseurl}}/public/imise-logo.svg" style="height:4.5em"></a>
+</div>
+
+<img src="{{ site.baseurl}}/public/ghalandari.jpg" style="height:5em">
+<div class="inbox">
+<a href="{{ site.links.ghalandari }}">Maryam Ghalandari</a><br>
+Leipzig, Germany<br>
+Social Media<br>
+</div>
+<div class="inbox">
+<a href="{{ site.links.imise }}"><img src="{{site.baseurl}}/public/imise-logo.svg" style="height:4.5em"></a>
+</div>
+
+<img src="{{ site.baseurl}}/public/dornauer.jpg" style="height:5em">
+<div class="inbox">
+<a href="{{ site.links.dornauer }}">Verena Dornauer</a><br>
+Hall in Tirol, Austria<br>
+Webmaster, Ontologist, Programmer<br>
+</div>
+<div class="inbox">
+<a href="{{ site.links.umit }}"><img src="{{site.baseurl}}/public/umit-logo.svg" style="height:4.5em"></a>
+</div>
+
+<img src="{{ site.baseurl}}/public/pause.jpg" style="height:5em">
+<div class="inbox">
+<a href="{{ site.links.pause }}">Thomas Pause</a><br>
+Leipzig, Germany<br>
+Webmaster, Programmer<br>
+</div>
+<div class="inbox">
+<a href="{{ site.links.imise }}"><img src="{{site.baseurl}}/public/imise-logo.svg" style="height:4.5em"></a>
+</div>
+
+</div>
 
 ## Webmaster
 
