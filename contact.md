@@ -72,7 +72,7 @@ Social Media<br>
 <div class="inbox">
 <a href="{{ site.links.dornauer }}">Verena Dornauer</a><br>
 Hall in Tirol, Austria<br>
-Webmaster, Ontologist, Programmer<br>
+Ontologist<br>
 </div>
 <div class="inbox">
 <a href="{{ site.links.umit }}"><img src="{{site.baseurl}}/public/umit-logo.svg" style="height:4.5em"></a>
