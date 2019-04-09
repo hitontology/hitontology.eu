@@ -1,5 +1,5 @@
 ---
 layout: page
-title:
+title: Home
 order: 5
 ---
