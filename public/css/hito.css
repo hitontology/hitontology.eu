@@ -11,3 +11,12 @@
   grid-template-columns: 6em 12em 10em;
   grid-gap:1em;
 }
+
+#hito-logo {
+  background-image:url("../hito.svg");
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  height:20rem;
+  width:100%;
+}
