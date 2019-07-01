@@ -63,7 +63,7 @@ Ontologist<br>
 <div class="inbox">
 <a href="{{ site.links.ghalandari }}">Maryam Ghalandari</a><br>
 Leipzig, Germany<br>
-Social Media<br>
+Researcher<br>
 </div>
 <div class="inbox">
 <a href="{{ site.links.imise }}"><img src="{{site.url}}{{site.baseurl}}/public/imise-logo.svg"></a>
