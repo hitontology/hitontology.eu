@@ -7,6 +7,7 @@ order: 30
 * Download (coming soon)
 * [Browse](https://hitontology.eu/ontology)
 * [Query](https://hitontology.eu/sparql)
+* [Search](https://hitontology.eu/search/)
 
 ## Deliverables
 

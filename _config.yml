@@ -23,6 +23,10 @@ internal:
   slack:     https://hito-project.slack.com/
   googledrive: https://drive.google.com/drive/folders/1vvBFwDhE9S1Mm3i317KjubNdLsW1iCJU
 
+hito:
+  ontology: https://hitontology.eu/ontology/ 
+  search: https://hitontology.eu/search/ 
+
 links:
   imise:     https://imise.uni-leipzig.de/
   umit:      https://umit.at/
