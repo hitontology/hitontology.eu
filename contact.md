@@ -3,7 +3,7 @@ layout: page
 title: Contact
 order: 80
 ---
-
+<img src="{{site.url}}{{ site.baseurl}}/public/team.jpg" style="max-width:90%;margin:0 auto;">
 ## Project Leaders
 <div class="teamGrid">
 <img src="{{site.url}}{{ site.baseurl}}/public/winter.jpg">
