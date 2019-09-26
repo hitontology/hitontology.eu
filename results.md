@@ -40,3 +40,17 @@ ICIMTH 2019, Athens. Best Poster Award.
 </figcaption>
 </figure>
 
+<figure>
+<center>
+<a href="{{site.url}}{{site.baseurl}}/public/medinfo-2019-poster-ea.svg">
+<img src="{{site.url}}{{site.baseurl}}/public/medinfo-2019-poster-ea-400.png" alt="An Ontology for Describing Health IT Interventions: Methodological Considerations"/>
+</a>
+</center>
+<figcaption>
+An Ontology for Describing Health IT Interventions: Methodological Considerations.<br>
+Elske Ammenwerth, Verena Dornauer, Maryam Ghalandari, Franziska Jahn, Nicolet de Keizer, Alfred Winter.<br>
+Proceedings of Medinfo 2019, the 17th World Congress on Medical and Health Informatics, 25.-30.8.2019, Lyon.<br>
+Amsterdam: IOS Press. pp. 1419-20.
+</figcaption>
+</figure>
+
