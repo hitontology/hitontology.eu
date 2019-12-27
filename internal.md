@@ -13,4 +13,6 @@ order: 35
 
 * <a href="{{ site.internal.slack }}" target="_blank">Slack Workspace</a>
 
-* Conductor (not linked yet)
+* <a href="{{ site.internal.form }}" target="_blank">Create Software Product</a>
+
+* <a href="{{ site.internal.conductor }}" target="_blank">Conductor</a>
