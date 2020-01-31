@@ -40,6 +40,6 @@ order: 5
 </div>
 
 ---
-<center><img src="{{site.url}}{{ site.baseurl}}/public/hito-diagram.png">The HITO-Diagram</center>
+<center><img src="{{site.url}}{{ site.baseurl}}/public/hito-diagram.svg">The HITO-Diagram</center>
 ---
 <center><img src="{{site.url}}{{ site.baseurl}}/public/hito-graph.png">The HITO-Graph</center>
