@@ -3,7 +3,7 @@
 This is the website for HITO – A Health IT Ontology for systematically describing application systems and software products in health IT.
 It is a fork of the Hyde layout.
 You can find the original Hyde layout readme below to see how to edit the page in the master branch.
-
+<!--  -->
 ## Publish
 Change the `master` branch and run `jekyll serve` or execute `./run`.
 Check if everyone looks normal.

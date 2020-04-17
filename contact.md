@@ -26,7 +26,7 @@ permanent professor<br>
 <a href="{{ site.links.umit }}"><img src="{{site.url}}{{site.baseurl}}/public/umit-logo.svg"></a>
 </div>
 </div>
-
+<!--  -->
 ## Project Team
 <div class="teamGrid">
 <img src="{{site.url}}{{ site.baseurl}}/public/hoeffner.jpg">

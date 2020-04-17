@@ -5,7 +5,7 @@ order: 5
 ---
 <p class="lead">{{ site.description }}</p>
 
-
+<!--  -->
 <div class="flexy">
 <div class="flex-item">
   <a title="Faceted Search" href="https://hitontology.eu/search/">Faceted Search

@@ -3,7 +3,7 @@ layout: page
 title: Imprint
 order: 99
 ---
-
+<!--  -->
 ## Legal Notice
 
 These pages are being maintained by the research group Management of Information Systems in the Healthcare (MIG) of the Institute for Medical Informatics, Statistics and Epidemiology (IMISE) of the University of Leipzig.
