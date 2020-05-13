@@ -21,4 +21,38 @@
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.url}}{{ site.baseurl }}/public/hito-apple-touch.png">
   <link rel="shortcut icon" href="{{site.url}}{{ site.baseurl }}/public/hito.png">
 
+  {% if page.use_sgvizler %}
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="https://mgskjaeveland.github.io/sgvizler/v/0.7/sgvizler.js"></script>
+  <script>
+  sgvizler
+  .prefix("meta", "http://www.snik.eu/ontology/meta/")
+  .prefix("ob", "http://www.snik.eu/ontology/ob/")
+  .prefix("bb", "http://www.snik.eu/ontology/bb/")
+  .prefix("he", "http://www.snik.eu/ontology/he/")
+  .prefix("it", "http://www.snik.eu/ontology/it/")
+  .prefix("ciox", "http://www.snik.eu/ontology/ciox/")
+  .prefix("hito", "http://hitontology.eu/ontology/")
+  .prefix("", "http://hitontology.eu/ontology/")
+	.prefix("skos", "http://www.w3.org/2004/02/skos/core#")
+	.defaultEndpointURL("https://hitontology.eu/sparql");
+  </script>
+  {% endif %}
+  {% if page.use_sgvizler_table %}
+  <script>
+  sgvizler
+  .defaultChartFunction("sgvizler.visualization.Table")
+  .defaultChartWidth(1000);
+
+  $(document).ready(function()
+  {
+    $("input[id^='sgvizler-button-']").each(function()
+    {
+      this.addEventListener("click",function() {sgvizler.containerDraw(this.id.replace("-button-","-div-"));},false);
+    });
+  });
+  </script>
+  {% endif %}
+
 </head>
