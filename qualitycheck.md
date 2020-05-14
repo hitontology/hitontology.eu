@@ -7,6 +7,30 @@ use_sgvizler: true
 use_sgvizler_table: true
 ---
 <div id="accordion">
+
+<h3>Software Product with no Function</h3>
+<div>
+<h4>Situation</h4>
+Each software product should have at least one function.
+<h4>Problem</h4>
+Some software products may not have any functions.
+<h4>Solution</h4>
+The editors need to research and add features to the software products listed below.
+<br/>
+<input type="button" id="sgvizler-button-undefinedobject" value="List Software Products with no Function" />
+<div id="sgvizler-div-undefinedobject"
+         data-sgvizler-query="
+SELECT DISTINCT ?targetNode                                                                                                                                                                                                                                                                                                   
+FROM <http://hitontology.eu/ontology>
+{
+ ?targetNode a hito:SoftwareProduct.
+ MINUS {?resource hito:enterpriseFunction ?citation.}
+}
+
+">
+</div>
+</div>
+
 <h3>Undefined Objects</h3>
 <div>
 <h4>Situation</h4>
@@ -16,7 +40,7 @@ Sometimes concepts occur as only as an object but not as a subject.
 <h4>Solution</h4>
 The responsible extractors for the respective subontologies need to add statements for the objects listed below.
 <br/>
-<input type="button" id="sgvizler-button-undefinedobject" value="List Classes with Undefined Restriction Object" />
+<input type="button" id="sgvizler-button-undefinedobject" value="List Software Products with Undefined Restriction Object" />
 <div id="sgvizler-div-undefinedobject"
          data-sgvizler-query="
 select distinct ?targetNode
@@ -100,7 +124,7 @@ Subclass cycles (A subclass of B ... subclass of A) collapse all members of the 
 Find subclass cycles below and and manually remove at least one of them.
 Because of the limitiations of SPARQL 1.1 property paths, we cannot select the full cycle but only give all pairs of classes on a cycle.
 <br/>
-<input type="button" id="sgvizler-button-cycle" value="List Classes on Subclass Cycles" />
+<input type="button" id="sgvizler-button-cycle" value="List Software Products on Subclass Cycles" />
 <div id="sgvizler-div-cycle"
          data-sgvizler-query="
 select distinct ?class ?class2
@@ -168,7 +192,7 @@ Some don't.
 <h4>Solution</h4>
 Find unconnected ones.
 <br/>
-<input type="button" id="sgvizler-button-definition" value="List Classes with Missing Definition" />
+<input type="button" id="sgvizler-button-definition" value="List Software Products with Missing Definition" />
 <div id="sgvizler-div-definition"
          data-sgvizler-query="
 select ?class
@@ -190,7 +214,7 @@ Some don't.
 <h4>Solution</h4>
 Try to find a definition in the source.
 <br/>
-<input type="button" id="sgvizler-button-definition" value="List Classes with Missing Definition" />
+<input type="button" id="sgvizler-button-definition" value="List Software Products with Missing Definition" />
 <div id="sgvizler-div-definition"
          data-sgvizler-query="
 select ?class
