@@ -45,7 +45,7 @@ FROM <http://hitontology.eu/ontology>
 <h3>Domain Violation</h3>
 <div>
 <h4>Situation</h4>
-Each SNIK property has a domain that defines allowed subjects.
+Each HITO property has a domain that defines allowed subjects.
 <h4>Problem</h4>
 Some classes are used as a subject for a triple without being a direct or transitive subclass of the defined domain of the property.
 <h4>Solution</h4>
@@ -69,7 +69,7 @@ FROM <http://hitontology.eu/ontology>
 <h3>Range Violation</h3>
 <div>
 <h4>Situation</h4>
-Each SNIK property has a range that defines allowed objects.
+Each HITO property has a range that defines allowed objects.
 <h4>Problem</h4>
 Some classes are used as an object for a triple  without being a direct or transitive subclass of the defined range of the property.
 <h4>Solution</h4>
