@@ -8,6 +8,28 @@ use_sgvizler_table: true
 ---
 <div id="accordion">
 
+<h3>Classified with no Catalogue</h3>
+<div>
+<h4>Situation</h4>
+Each classified should belong to a catalogue.
+<h4>Problem</h4>
+Some classifieds don't belong to any catalogue.
+<h4>Solution</h4>
+The extractors need to add a catalogue for each such classified in the list.
+<br/>
+<input type="button" id="sgvizler-button-undefinedobject" value="List Software Products with no Function" />
+<div id="sgvizler-div-undefinedobject"
+         data-sgvizler-query="
+SELECT DISTINCT ?classified
+FROM <http://hitontology.eu/ontology>
+{
+ ?classified a [rdfs:subClassOf hito:Classified].
+ MINUS {?classified ?p [a [rdfs:subClassOf hito:Catalogue]].}
+}
+">
+</div>
+</div>
+
 <h3>Software Product with no Function</h3>
 <div>
 <h4>Situation</h4>
