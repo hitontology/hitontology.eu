@@ -17,7 +17,7 @@ Some classifieds don't belong to any catalogue.
 <h4>Solution</h4>
 The extractors need to add a catalogue for each such classified in the list.
 <br/>
-<input type="button" id="sgvizler-button-undefinedobject" value="List Software Products with no Function" />
+<input type="button" id="sgvizler-button-undefinedobject" value="List Classifieds with no Catalogue" />
 <div id="sgvizler-div-undefinedobject"
          data-sgvizler-query="
 SELECT DISTINCT ?classified
