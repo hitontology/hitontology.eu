@@ -3,6 +3,8 @@ layout: page
 title: Publications
 order: 31
 ---
+<!-- use css for superduper collapsibles -->
+<link rel="stylesheet" href="{{site.url}}{{ site.baseurl }}/public/css/colaps.css">
 ## Publications
 
 ## Posters
@@ -21,15 +23,21 @@ GMDS 2019, Dortmund.
 </figcaption>
 </figure>
 
-<button type="button" class="collapsible">Open BibTeX</button>
-<div class="contents">
- <p>@INPROCEEDINGS {hitometh1,
-     author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Alfred Winter, Elske Ammenwerth",
-     title     = "Developing and implementing a health {IT} ontology for facilitating retrieval of health {IT} evaluation studies",
-     booktitle = "64. Jahrestagung der Deutschen Gesellschaft für Medizinische Informatik, Biometrie und Epidemiologie e. V. (GMDS)",
-     year      = "2019"
- }
-</p>
+<div class="wrap-collabsible">
+  <input id="collapsible1" class="toggle" type="checkbox">
+  <label for="collapsible1" class="lbl-toggle">Open BibTeX</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>
+      @INPROCEEDINGS {hitometh1,
+          author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Alfred Winter, Elske Ammenwerth",
+          title     = "Developing and implementing a health {IT} ontology for facilitating retrieval of health {IT} evaluation studies",
+          booktitle = "64. Jahrestagung der Deutschen Gesellschaft für Medizinische Informatik, Biometrie und Epidemiologie e. V. (GMDS)",
+          year      = "2019"
+      }
+      </p>
+    </div>
+  </div>
 </div>
 
 <figure>
@@ -45,14 +53,21 @@ ICIMTH 2019, Athens. Best Poster Award.
 </figcaption>
 </figure>
 
-<button type="button" class="collapsible">Open BibTeX</button>
-<div class="contents">
- <p>@INPROCEEDINGS {hitometh2,
-     author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Birgit Schneider, Alfred Winter, Elske Ammenwerth",
-     title     = "Challenges and solutions while developing {HITO}–a {H}ealth {IT} {O}ntology",
-     booktitle = "International Conference on Informatics, Management, and Technology in Healthcare",
-     year      = "2019"
- }</p>
+<div class="wrap-collabsible">
+  <input id="collapsible2" class="toggle" type="checkbox">
+  <label for="collapsible2" class="lbl-toggle">Open BibTeX</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>
+      @INPROCEEDINGS {hitometh2,
+          author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Birgit Schneider, Alfred Winter, Elske Ammenwerth",
+          title     = "Challenges and solutions while developing {HITO}–a {H}ealth {IT} {O}ntology",
+          booktitle = "International Conference on Informatics, Management, and Technology in Healthcare",
+          year      = "2019"
+      }
+      </p>
+    </div>
+  </div>
 </div>
 
 <figure>
@@ -69,14 +84,37 @@ Amsterdam: IOS Press. pp. 1419-20.
 </figcaption>
 </figure>
 
-<button type="button" class="collapsible">Open BibTeX</button>
-<div class="contents">
- <p>@INPROCEEDINGS {hitometh,
-   title={An Ontology for Describing Health {IT} Interventions: {M}ethodological Considerations},
-   author={Ammenwerth, Elske and Dornauer, Verena and Ghalandari, Maryam and Jahn, Franziska and Winter, Alfred},
-   journal={GMDS},
-   volume={264},
-   pages={1419--1420},
-   year={2019}
- }</p>
+<div class="wrap-collabsible">
+  <input id="collapsible3" class="toggle" type="checkbox">
+  <label for="collapsible3" class="lbl-toggle">Open BibTeX</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>
+      @INPROCEEDINGS {hitometh,
+        title={An Ontology for Describing Health {IT} Interventions: {M}ethodological Considerations},
+        author={Ammenwerth, Elske and Dornauer, Verena and Ghalandari, Maryam and Jahn, Franziska and Winter, Alfred},
+        journal={GMDS},
+        volume={264},
+        pages={1419--1420},
+        year={2019}
+      }
+      </p>
+    </div>
+  </div>
 </div>
+
+<!-- Script for superduper collapsibles -->
+<script>
+let myLabels = document.querySelectorAll('.lbl-toggle');
+
+Array.from(myLabels).forEach(label => {
+  label.addEventListener('keydown', e => {
+    // 32 === spacebar
+    // 13 === enter
+    if (e.which === 32 || e.which === 13) {
+      e.preventDefault();
+      label.click();
+    };
+  });
+});
+</script>
