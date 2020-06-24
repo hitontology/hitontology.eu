@@ -8,8 +8,6 @@ order: 31
 ## Publications
 
 ## Posters
-<script src="{{site.url}}{{site.baseurl}}/assets/js/collapse.js"></script>
-
 <figure>
 <center>
 <a href="{{site.url}}{{site.baseurl}}/public/gmds-2019-poster-vd.svg">
@@ -29,12 +27,11 @@ GMDS 2019, Dortmund.
   <div class="collapsible-content">
     <div class="content-inner">
       <p>
-      @INPROCEEDINGS {hitometh1,
-          author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Alfred Winter, Elske Ammenwerth",
-          title     = "Developing and implementing a health {IT} ontology for facilitating retrieval of health {IT} evaluation studies",
-          booktitle = "64. Jahrestagung der Deutschen Gesellschaft für Medizinische Informatik, Biometrie und Epidemiologie e. V. (GMDS)",
-          year      = "2019"
-      }
+      @INPROCEEDINGS {hitomethods1,<br>
+          author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Alfred Winter, Elske Ammenwerth",<br>
+          title     = "Developing and implementing a health {IT} ontology for facilitating retrieval of health {IT} evaluation studies",<br>
+          booktitle = "64. Jahrestagung der Deutschen Gesellschaft für Medizinische Informatik, Biometrie und Epidemiologie e. V. (GMDS)",<br>
+          year      = "2019"}
       </p>
     </div>
   </div>
@@ -59,12 +56,11 @@ ICIMTH 2019, Athens. Best Poster Award.
   <div class="collapsible-content">
     <div class="content-inner">
       <p>
-      @INPROCEEDINGS {hitometh2,
-          author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Birgit Schneider, Alfred Winter, Elske Ammenwerth",
-          title     = "Challenges and solutions while developing {HITO}–a {H}ealth {IT} {O}ntology",
-          booktitle = "International Conference on Informatics, Management, and Technology in Healthcare",
-          year      = "2019"
-      }
+      @INPROCEEDINGS {hitomethods2,<br>
+          author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Birgit Schneider, Alfred Winter, Elske Ammenwerth",<br>
+          title     = "Challenges and solutions while developing {HITO}–a {H}ealth {IT} {O}ntology",<br>
+          booktitle = "International Conference on Informatics, Management, and Technology in Healthcare",<br>
+          year      = "2019"}
       </p>
     </div>
   </div>
@@ -90,14 +86,13 @@ Amsterdam: IOS Press. pp. 1419-20.
   <div class="collapsible-content">
     <div class="content-inner">
       <p>
-      @INPROCEEDINGS {hitometh,
-        title={An Ontology for Describing Health {IT} Interventions: {M}ethodological Considerations},
-        author={Ammenwerth, Elske and Dornauer, Verena and Ghalandari, Maryam and Jahn, Franziska and Winter, Alfred},
-        journal={GMDS},
-        volume={264},
-        pages={1419--1420},
-        year={2019}
-      }
+      @INPROCEEDINGS {hitomethods3,<br>
+        title={An Ontology for Describing Health {IT} Interventions: {M}ethodological Considerations},<br>
+        author={Ammenwerth, Elske and Dornauer, Verena and Ghalandari, Maryam and Jahn, Franziska and Winter, Alfred},<br>
+        journal={GMDS},<br>
+        volume={264},<br>
+        pages={1419--1420},<br>
+        year={2019} }
       </p>
     </div>
   </div>
