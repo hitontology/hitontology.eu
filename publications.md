@@ -4,7 +4,7 @@ title: Publications
 order: 31
 ---
 <!-- use css for superduper collapsibles -->
-<link rel="stylesheet" href="{{site.url}}{{ site.baseurl }}/public/css/colaps.css">
+<link rel="stylesheet" href="{{site.url}}{{ site.baseurl }}/public/css/collapse.css">
 ## Publications
 
 ## Posters
@@ -113,3 +113,6 @@ Array.from(myLabels).forEach(label => {
   });
 });
 </script>
+
+## Workshops
+maybe include workshops here?
