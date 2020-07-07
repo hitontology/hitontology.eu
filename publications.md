@@ -5,8 +5,32 @@ order: 31
 ---
 <!-- use css for superduper collapsibles -->
 <link rel="stylesheet" href="{{site.url}}{{ site.baseurl }}/public/css/collapse.css">
-## Publications
+## Papers
 
+<p align="center"><iframe width="560" height="630" src="{{site.url}}{{site.baseurl}}/public/paper_vdornauer.pdf" frameborder="0" allowfullscreen></iframe></p>
+
+* Dornauer V, Jahn F, Hoeffner K, Winter A, Ammenwerth E. <br>**Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies.**
+<p align="center"><a href="http://ebooks.iospress.nl/publication/54602">Link</a></p>
+
+<div class="wrap-collabsible">
+  <input id="collapsible0" class="toggle" type="checkbox">
+  <label for="collapsible0" class="lbl-toggle">Open BibTeX</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>
+        @article{paper_nlp,<br>
+        author = {Dornauer, Verena and Jahn, Franziska and Höffner, Konrad and Winter, Alfred and Ammenwerth, Elske},<br>
+        year = {2020},<br>
+        month = {06},<br>
+        pages = {95-98},<br>
+        title = {Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies},<br>
+        volume = {272},<br>
+        journal = {Studies in health technology and informatics},<br>
+        doi = {10.3233/SHTI200502}}
+      </p>
+    </div>
+  </div>
+</div>
 ## Posters
 <figure>
 <center>
@@ -116,8 +140,8 @@ Array.from(myLabels).forEach(label => {
 
 ## Workshops/Presentations
 
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZcF0uyZMjvQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<!-- <p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZcF0uyZMjvQ?rel=0;autoplay=1;modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p> -->
 
 Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies (Workshop with V.Dornauer)
 <br>
