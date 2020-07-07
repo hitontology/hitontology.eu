@@ -6,27 +6,24 @@ order: 5
 
 <p class="lead">{{ site.description }}</p>
 
+---
 ## Search
 <!--  -->
 <div class="flexy">
 <div class="flex-item">
-  <a title="Faceted Search" href="https://hitontology.eu/search/">Search for evaluation studies
+  <a title="Faceted Search" href="https://hitontology.eu/search/">Search for <br> evaluation <br> studies
   <img title="Faceted Search" alt="Faceted Search" src="{{site.url}}{{ site.baseurl}}/public/search.jpg">
 </a>
 </div>
 <div class="flex-item">
-  <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">Search for MEDFLOSS products
-  <img title="Faceted Search" alt="Faceted Search" src="{{site.url}}{{ site.baseurl}}/public/search.jpg">
-</a>
-</div>
-<div class="flex-item">
-  <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">Search commercial software products
+  <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">Search for MEDFLOSS and commercial products
   <img title="Faceted Search" alt="Faceted Search" src="{{site.url}}{{ site.baseurl}}/public/search.jpg">
 </a>
 </div>
 </div>
 <br>
 
+---
 ## Other results
 
 <div class="flexy">
@@ -58,6 +55,7 @@ order: 5
 </div>
 <br>
 
+---
 ## Diagrams
 
 ---
