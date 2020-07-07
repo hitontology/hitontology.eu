@@ -114,5 +114,31 @@ Array.from(myLabels).forEach(label => {
 });
 </script>
 
-## Workshops
-maybe include workshops here?
+## Workshops/Presentations
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZcF0uyZMjvQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies (Workshop with V.Dornauer)
+<br>
+<p align="center"><a href="https://www.youtube.com/watch?v=ZcF0uyZMjvQ">Link</a></p>
+
+<div class="wrap-collabsible">
+  <input id="collapsible4" class="toggle" type="checkbox">
+  <label for="collapsible4" class="lbl-toggle">Open BibTeX</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>
+        @article{workshop_nlp,<br>
+        author = {Dornauer, Verena and Jahn, Franziska and Höffner, Konrad and Winter, Alfred and Ammenwerth, Elske},<br>
+        year = {2020},<br>
+        month = {06},<br>
+        pages = {95-98},<br>
+        title = {Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies},<br>
+        volume = {272},<br>
+        journal = {Studies in health technology and informatics},<br>
+        doi = {10.3233/SHTI200502}}
+      </p>
+    </div>
+  </div>
+</div>
