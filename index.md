@@ -3,15 +3,33 @@ layout: page
 title: Home
 order: 5
 ---
+
 <p class="lead">{{ site.description }}</p>
 
+## Search
 <!--  -->
 <div class="flexy">
 <div class="flex-item">
-  <a title="Faceted Search" href="https://hitontology.eu/search/">Faceted Search
+  <a title="Faceted Search" href="https://hitontology.eu/search/">Search for evaluation studies
   <img title="Faceted Search" alt="Faceted Search" src="{{site.url}}{{ site.baseurl}}/public/search.jpg">
 </a>
 </div>
+<div class="flex-item">
+  <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">Search for MEDFLOSS products
+  <img title="Faceted Search" alt="Faceted Search" src="{{site.url}}{{ site.baseurl}}/public/search.jpg">
+</a>
+</div>
+<div class="flex-item">
+  <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">Search commercial software products
+  <img title="Faceted Search" alt="Faceted Search" src="{{site.url}}{{ site.baseurl}}/public/search.jpg">
+</a>
+</div>
+</div>
+<br>
+
+## Other results
+
+<div class="flexy">
 <div class="flex-item">
   <a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/hito.ttl">Download
   <img title="Download" alt="Download" src="{{site.url}}{{ site.baseurl}}/public/download.png">
@@ -38,8 +56,12 @@ order: 5
 </a>
 </div>
 </div>
+<br>
+
+## Diagrams
 
 ---
 <center><img src="{{site.url}}{{ site.baseurl}}/public/hito-diagram.svg">The HITO-Diagram</center>
+
 ---
 <center><img src="{{site.url}}{{ site.baseurl}}/public/hito-graph.png">The HITO-Graph</center>
