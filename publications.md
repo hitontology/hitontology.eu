@@ -18,7 +18,7 @@ order: 31
   <div class="collapsible-content">
     <div class="content-inner">
       <p>
-        @article{paper_nlp,<br>
+        @article{hito_nlp_paper,<br>
         author = {Dornauer, Verena and Jahn, Franziska and Höffner, Konrad and Winter, Alfred and Ammenwerth, Elske},<br>
         year = {2020},<br>
         month = {06},<br>
@@ -153,7 +153,7 @@ Use of Natural Language Processing for Precise Retrieval of Key Elements of Heal
   <div class="collapsible-content">
     <div class="content-inner">
       <p>
-        @article{workshop_nlp,<br>
+        @article{hito_nlp_workshop,<br>
         author = {Dornauer, Verena and Jahn, Franziska and Höffner, Konrad and Winter, Alfred and Ammenwerth, Elske},<br>
         year = {2020},<br>
         month = {06},<br>
