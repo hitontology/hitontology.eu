@@ -28,7 +28,7 @@ order: 5
 
 <div class="flexy">
 <div class="flex-item">
-  <a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/hito.ttl">Download
+  <a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/hito.ttl">Download <br>
   <img title="Download" alt="Download" src="{{site.url}}{{ site.baseurl}}/public/download.png">
 </a>
 </div>
