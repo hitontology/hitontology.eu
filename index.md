@@ -28,13 +28,18 @@ order: 5
 
 <div class="flexy">
 <div class="flex-item">
-  <a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/hito.ttl">Download <br>
-  <img title="Download" alt="Download" src="{{site.url}}{{ site.baseurl}}/public/download.png">
+  <a title="Browse" href="https://hitontology.eu/ontology/">Browse
+  <img title="Browse" alt="Browse" src="{{site.url}}{{ site.baseurl}}/public/browse.png">
 </a>
 </div>
 <div class="flex-item">
-  <a title="Browse" href="https://hitontology.eu/ontology/">Browse
-  <img title="Browse" alt="Browse" src="{{site.url}}{{ site.baseurl}}/public/browse.png">
+<a title="Feature-Catalogues" href="https://hitontology.eu/ontology/FeatureCatalogue">Feature-Catalogues
+<img title="Feature-Catalogues" alt="Feature-Catalogues" src="{{site.url}}{{ site.baseurl}}/public/catalogue.jpg">
+</a>
+</div>
+<div class="flex-item">
+<a title="Function-Catalogues" href="https://hitontology.eu/ontology/BbReferenceModelFunctionCatalogue">Function-Catalogues
+<img title="Function-Catalogues" alt="Function-Catalogues" src="{{site.url}}{{ site.baseurl}}/public/catalogue.jpg">
 </a>
 </div>
 <div class="flex-item">
@@ -43,13 +48,8 @@ order: 5
 </a>
 </div>
 <div class="flex-item">
-  <a title="Feature-Catalogues" href="https://hitontology.eu/ontology/FeatureCatalogue">Feature-Catalogues
-  <img title="Feature-Catalogues" alt="Feature-Catalogues" src="{{site.url}}{{ site.baseurl}}/public/catalogue.jpg">
-</a>
-</div>
-<div class="flex-item">
-  <a title="Function-Catalogues" href="https://hitontology.eu/ontology/BbReferenceModelFunctionCatalogue">Function-Catalogues
-  <img title="Function-Catalogues" alt="Function-Catalogues" src="{{site.url}}{{ site.baseurl}}/public/catalogue.jpg">
+<a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/hito.ttl">Download <br>
+<img title="Download" alt="Download" src="{{site.url}}{{ site.baseurl}}/public/download.png">
 </a>
 </div>
 </div>
