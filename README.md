@@ -1,18 +1,29 @@
 # hitontology.eu
 
 This is the website for HITO – A Health IT Ontology for systematically describing application systems and software products in health IT.
-It is a fork of the Hyde layout.
+It is a fork of the original Hyde layout that used to be a theme for Jekyll but is now standalone.
 You can find the original Hyde layout readme below to see how to edit the page in the master branch.
 <!--  -->
+## Setup
+1. Install Ruby
+2. Install Jekyll
+
+### Example for Arch Linux
+
+    sudo pacman -S ruby
+    gem install jekyll
+
+Set `PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin` in your environment configuration file, such as `.profile` or `.zshrc`.
+
 ## Publish
-Change the `master` branch and run `jekyll serve` or execute `./run`.
+Switch to the `master` branch and run `jekyll serve` or execute `./run`.
 Check if everyone looks normal.
 Then, on the same machine, checkout the `static` branch and execute the  `update` script, which uses wget to get a static copy.
+For ease of use, we recommend to keep two copies of the repository, one for the master branch and one for the static branch.
 Then git commit and push the static branch.
 Finally, go to the bruchtal server and run `git pull` in /var/www/html/hitontology.eu.
 
-
-# Hyde
+# Original Hyde Layout
 
 Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
