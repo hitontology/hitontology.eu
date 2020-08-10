@@ -19,4 +19,6 @@ order: 35
 
 * <a href="{{ site.internal.conductor }}" target="_blank">Conductor</a>
 
-* <a href="{{ site.internal.database }}" target="_blank">HITO Database</a>
+* <a href="{{ site.internal.database.admin }}" target="_blank">HITO Database Admin Interface</a>
+
+* <a href="{{ site.internal.database.schema }}" target="_blank">HITO Database Schema</a>

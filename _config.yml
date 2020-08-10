@@ -26,7 +26,9 @@ internal:
   qualitycheck: /qualitycheck
   conductor: https://hitontology.eu/conductor
   form: https://hitontology.github.io/instancegenerator/
-  database: https://hitontology.eu/phppgadmin/
+  database:
+    admin: https://hitontology.eu/phppgadmin/
+    schema: https://github.com/hitontology/database/releases/latest/download/HITOdatabaseUML.pdf
 
 hito:
   ontology: https://hitontology.eu/ontology/
