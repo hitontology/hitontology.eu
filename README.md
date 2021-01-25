@@ -22,6 +22,7 @@ Then, on the same machine, checkout the `static` branch and execute the  `update
 For ease of use, we recommend to keep two copies of the repository, one for the master branch and one for the static branch.
 Then git commit and push the static branch.
 Finally, go to the bruchtal server and run `git pull` in /var/www/html/hitontology.eu.
+If you publish it for the first time, go into the `hitontology.eu` directory and perform `git clone git@github.com:hitontology/facetedbrowsing.git search`.
 
 # Original Hyde Layout
 
