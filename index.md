@@ -59,7 +59,7 @@ order: 5
 ## Diagrams
 
 ---
-<center><img src="{{site.url}}{{ site.baseurl}}/public/hito-diagram1.svg">The HITO-Diagram</center>
+<center><img src="{{site.url}}{{ site.baseurl}}/public/hito-diagram2.png">The HITO-Diagram</center>
 
 ---
 <center><img src="{{site.url}}{{ site.baseurl}}/public/hito-graph.png">The HITO-Graph</center>
