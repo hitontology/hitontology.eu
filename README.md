@@ -15,13 +15,32 @@ You can find the original Hyde layout readme below to see how to edit the page i
 
 Set `PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin` in your environment configuration file, such as `.profile` or `.zshrc`.
 
+### Example for MacOS (with Homebrew)
+
+Install Ruby:
+
+    brew install ruby
+
+Add the brew ruby path to your shell configuration:
+If you're using Zsh:
+
+    echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+
+Install the bundler and jekyll gems:
+
+    gem install --user-install bundler jekyll
+
+Install wget:
+
+    brew install wget
+
 ## Publish
 Switch to the `master` branch and run `jekyll serve` or execute `./run`.
 Check if everyone looks normal.
-Then, on the same machine, checkout the `static` branch and execute the  `update` script, which uses wget to get a static copy.
+Then, on the same machine, checkout the `static` branch and execute the  `./update` script, which uses wget to get a static copy.
 For ease of use, we recommend to keep two copies of the repository, one for the master branch and one for the static branch.
 Then git commit and push the static branch.
-Finally, go to the bruchtal server and run `git pull` in /var/www/html/hitontology.eu.
+Finally, go to the bruchtal server and run `git pull` in `/var/www/html/hitontology.eu.`
 
 If you publish it for the first time, go into the `hitontology.eu` directory and perform `git clone git@github.com:hitontology/facetedbrowsing.git search`. Then follow the installation instructions for the search.
 
