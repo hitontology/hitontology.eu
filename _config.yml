@@ -30,6 +30,7 @@ internal:
     admin: https://hitontology.eu/phppgadmin/
     schema: https://github.com/hitontology/database/releases/latest/download/HITOdatabaseUML.pdf
 
+# link targets hosted externally, absolute URLs required
 hito:
   ontology: https://hitontology.eu/ontology/
   search: https://hitontology.eu/search/
