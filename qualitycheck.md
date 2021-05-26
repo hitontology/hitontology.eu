@@ -100,14 +100,13 @@ The offending triples should be removed or remodelled to conform to the domain.
 <input type="button" id="sgvizler-button-domain" value="List Domain Violations" />
 <div id="sgvizler-div-domain"
          data-sgvizler-query="
-select *
+SELECT *
 FROM <http://hitontology.eu/ontology>
 {
  ?p rdfs:domain ?domain.
- filter(?domain!=meta:Top) 
  ?s ?p ?o.                                                                                                                                                                                                         
- minus {?s a|rdfs:subClassOf*|meta:subTopClass ?domain.}
-} order by ?p ?s
+ MINUS {?s a/rdfs:subClassOf* ?domain.}
+} ORDER BY ?p ?s
 ">
 </div>
 </div>
