@@ -9,11 +9,10 @@ You can find the original Hyde layout readme below to see how to edit the page i
 2. Install Jekyll
 
 ### Example for Arch Linux
-
-    sudo pacman -S ruby
-    gem install jekyll webrick
-
 Set `PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin` in your environment configuration file, such as `.profile` or `.zshrc`.
+
+    sudo pacman -S ruby ruby-bundler
+    bundle install
 
 ### Example for MacOS (with Homebrew)
 
