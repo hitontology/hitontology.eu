@@ -16,7 +16,6 @@ You can find the original Hyde layout readme below to see how to edit the page i
 
 Set `PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin` in your environment configuration file, such as `.profile` or `.zshrc`.
 
-
 ### Example for MacOS (with Homebrew)
 
 Install Ruby:
