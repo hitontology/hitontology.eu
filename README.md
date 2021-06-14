@@ -12,8 +12,10 @@ You can find the original Hyde layout readme below to see how to edit the page i
 
     sudo pacman -S ruby
     gem install jekyll bundler webrick
+    bundle install
 
 Set `PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin` in your environment configuration file, such as `.profile` or `.zshrc`.
+
 
 ### Example for MacOS (with Homebrew)
 

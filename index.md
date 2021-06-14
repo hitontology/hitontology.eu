@@ -12,12 +12,12 @@ order: 5
 <div class="flexy">
 <div class="flex-item">
   <a title="Faceted Search" href="https://hitontology.eu/search/">Search for <br> evaluation <br> studies
-  <img title="Faceted Search" alt="Faceted Search" src="{{ '/public/search.jpg' | relative_url }}">
+  <img title="Faceted Search" alt="Faceted Search" src="{% link ./public/search.jpg %}">
 </a>
 </div>
 <div class="flex-item">
   <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">Search for MEDFLOSS and commercial products
-  <img title="Faceted Search" alt="Faceted Search" src="{{ '/public/search.jpg' | relative_url }}">
+  <img title="Faceted Search" alt="Faceted Search" src="public/search.jpg">
 </a>
 </div>
 </div>
@@ -29,27 +29,27 @@ order: 5
 <div class="flexy">
 <div class="flex-item">
   <a title="Browse" href="https://hitontology.eu/ontology/">Browse
-  <img title="Browse" alt="Browse" src="{{ '/public/browse.png' | relative_url }}">
+  <img title="Browse" alt="Browse" src="public/browse.png">
 </a>
 </div>
 <div class="flex-item">
 <a title="Feature-Catalogues" href="https://hitontology.eu/ontology/FeatureCatalogue">Feature-Catalogues
-<img title="Feature-Catalogues" alt="Feature-Catalogues" src="{{ '/public/catalogue.jpg' | relative_url }}">
+<img title="Feature-Catalogues" alt="Feature-Catalogues" src="public/catalogue.jpg">
 </a>
 </div>
 <div class="flex-item">
 <a title="Function-Catalogues" href="https://hitontology.eu/ontology/BbReferenceModelFunctionCatalogue">Function-Catalogues
-<img title="Function-Catalogues" alt="Function-Catalogues" src="{{ '/public/catalogue.jpg' | relative_url }}">
+<img title="Function-Catalogues" alt="Function-Catalogues" src="public/catalogue.jpg">
 </a>
 </div>
 <div class="flex-item">
   <a title="Query" href= "https://hitontology.eu/sparql/">Query
-  <img title="Query" alt="Query" src="{{ '/public/sparql.png' | relative_url }}">
+  <img title="Query" alt="Query" src="public/sparql.png">
 </a>
 </div>
 <div class="flex-item">
 <a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/hito.ttl">Download <br>
-<img title="Download" alt="Download" src="{{ '/public/download.png' | relative_url }}">
+<img title="Download" alt="Download" src="public/download.png">
 </a>
 </div>
 </div>
@@ -65,6 +65,5 @@ order: 5
   </a>
   The HITO-Diagram
 </center>
-
 ---
-<center><img src="{{ '/public/hito-graph.png' | relative_url }}">The HITO-Graph</center>
+<center><img src="public/hito-graph.png">The HITO-Graph</center>
