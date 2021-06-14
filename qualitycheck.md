@@ -8,6 +8,34 @@ use_sgvizler_table: true
 ---
 <div id="accordion">
 
+<h3>No Type</h3>
+<div>
+<h4>Situation</h4>
+Each resource should have an rdf:type.
+<h4>Problem</h4>
+Some resources don't have a type except in some cases owl:NamedIndividual, which is not.
+<h4>Solution</h4>
+The editors need to add the missing types, with the help of the domain experts if necessary.
+<br/>
+<input type="button" id="sgvizler-button-undefinedobject" value="List Classifieds with no Catalogue" />
+<div id="sgvizler-div-undefinedobject"
+         data-sgvizler-query="
+SELECT DISTINCT(?x)
+FROM <http://hitontology.eu/ontology>
+{
+  ?x ?y ?z.
+  FILTER(STRSTARTS(STR(?x),'http://hitontology.eu/ontology/'))
+
+  MINUS
+  {
+    ?x rdf:type ?type.
+    FILTER(?type!=owl:NamedIndividual)
+  }
+}
+">
+</div>
+</div>
+
 <h3>Classified with no Catalogue</h3>
 <div>
 <h4>Situation</h4>
