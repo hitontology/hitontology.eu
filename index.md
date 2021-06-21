@@ -12,7 +12,7 @@ order: 5
 <div class="flexy">
 <div class="flex-item">
   <a title="Faceted Search" href="https://hitontology.eu/search/">Search for <br> evaluation <br> studies
-  <img title="Faceted Search" alt="Faceted Search" src="{% link ./public/search.jpg %}">
+  <img title="Faceted Search" alt="Faceted Search" src="public/search.jpg">
 </a>
 </div>
 <div class="flex-item">
@@ -60,8 +60,8 @@ order: 5
 
 ---
 <center>
-  <a href="{{ '/public/HITontology_V1V2_2021-06-21.svg' | relative_url }}" target="_blank">
-    <img src="{{ '/public/HITontology_V1V2_2021-06-21.svg' | relative_url }}">
+  <a href="public/HITontology_V1V2_2021-06-21.svg" target="_blank">
+    <img src="public/HITontology_V1V2_2021-06-21.svg">
   </a>
   The HITO-Diagram
 </center>
