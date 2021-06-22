@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>HITO</title>
+ <link href="https://hitontology.eu/atom.xml" rel="self"/>
+ <link href="https://hitontology.eu/"/>
+ <updated>2021-06-22T13:33:00+00:00</updated>
+ <id>https://hitontology.eu</id>
+ <author>
+   <name>Konrad Höffner & Thomas Pause</name>
+   <email></email>
+ </author>
+
+ 
+
+</feed>
