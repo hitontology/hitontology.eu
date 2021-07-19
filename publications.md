@@ -189,3 +189,14 @@ Use of Natural Language Processing for Precise Retrieval of Key Elements of Heal
     </div>
   </div>
 </div>
+
+<p align="center"><iframe width="560" height="315" src="{{ '/public/presentation_fjahn.pdf' | relative_url }}" frameborder="0" allowfullscreen></iframe></p>
+
+An ontology for precise descriptions of medical free/libre open source software (Presentation by Franziska Jahn, Thomas Karopka et al.)
+<br>
+<p align="center"><a href=https://www.orthanc-server.com/static.php?page=conference-schedule>Link</a></p>
+
+Abstract:
+The website medfloss.org provides a platform for retrieving medical FLOSS projects. Currently, it lists 361 projects that are described by certain characteristics like application type, license, and enterprise functions supported. The vocabulary used to describe the FLOSS projects does not describe the functionalities of FLOSS projects sufficiently in many cases. An ontology enabling systematic descriptions of medical software could help developers to clearly specify the software’s functionalities and make FLOSS projects on medfloss.org even better retrievable and comparable.
+
+HITO, the health IT ontology, is developed by an Austrian-German research team in order to support systematic descriptions of medical software. HITO integrates different existing taxonomies (e.g. parts of SNOMED CT, WHO classification of digital interventions) and software characteristics found in literature. To describe FLOSS projects on medfloss.org using HITO, the support of the FLOSS community is needed.
