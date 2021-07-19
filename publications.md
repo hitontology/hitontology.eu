@@ -31,6 +31,29 @@ order: 31
     </div>
   </div>
 </div>
+<p align="center"><iframe width="560" height="630" src="{{ '/public/paper_fjahn.pdf' | relative_url }}" frameborder="0" allowfullscreen></iframe></p>
+
+* Jahn F, Bindel M, Hoeffner K, Ghalandari M, Schneider B, Stäubert S, Dornauer V, Karopka T, Ammenwerth E, Winter A. <br>**Towards Precise Descriptions of Medical Free/Libre and Open Source Software.**
+<p align="center"><a href="https://ebooks.iospress.nl/publication/54205">Link</a></p>
+
+<div class="wrap-collabsible">
+  <input id="collapsible0" class="toggle" type="checkbox">
+  <label for="collapsible0" class="lbl-toggle">Open BibTeX</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>
+        @article{hito_medfloss_paper,<br>
+        author = {Jahn, Franziska and Bindel, Michelle and Hoeffner, Konrad and Ghalandari, Maryam and Schneider, Birgit and Staeubert, Sebastian and Dornauer, Verena and Karopka, Thomas and Ammenwerth, Elske and Winter, Alfred},<br>
+        year = {2020},<br>
+        pages = {463-468},<br>
+        title = {Towards Precise Descriptions of Medical Free/Libre and Open Source Software},<br>
+        volume = {270},<br>
+        journal = {Digital Personalized Health and Medicine},<br>
+        doi = {10.3233/SHTI200203}}
+      </p>
+    </div>
+  </div>
+</div>
 ## Posters
 <figure>
 <center>
