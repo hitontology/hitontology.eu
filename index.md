@@ -59,7 +59,12 @@ order: 5
 ## Diagrams
 
 ---
-<center><img src="{{ '/public/HITontology_V1V2_2021-06-21.svg' | relative_url }}">The HITO-Diagram</center>
+<center>
+  <a href="{{ '/public/HITontology_V1V2_2021-06-21.svg' | relative_url }}" target="_blank">
+    <img src="{{ '/public/HITontology_V1V2_2021-06-21.svg' | relative_url }}">
+  </a>
+  The HITO-Diagram
+</center>
 
 ---
 <center><img src="{{ '/public/hito-graph.png' | relative_url }}">The HITO-Graph</center>
