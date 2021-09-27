@@ -79,6 +79,16 @@ Ontologist<br>
 <a href="{{ site.links.umit }}"><img src="{{ '/public/umit-logo.svg' | relative_url }}"></a>
 </div>
 
+<img src="{{ '/public/hito.svg' | relative_url }}">
+<div class="inbox">
+<a href="{{ site.links.bindel }}">Michelle Bindel</a><br>
+Leipzig, Germany<br>
+Research Assitant<br>
+</div>
+<div class="inbox">
+<a href="{{ site.links.imise }}"><img src="{{ '/public/imise-logo.svg' | relative_url }}"></a>
+</div>
+
 <img src="{{ '/public/pause.jpg' | relative_url }}">
 <div class="inbox">
 <a href="{{ site.links.pause }}">Thomas Pause</a><br>
