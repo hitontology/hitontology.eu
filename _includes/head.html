@@ -1,13 +1,18 @@
 <head>
+  {% if page.title == "Home" %}
+  <base href=".">
+  {% else %}
+  <base href="..">
+  {% endif %}
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
+    {{ site.title }} &middot; {{ site.tagline }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+    {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
 
@@ -25,32 +30,30 @@
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script type="text/javascript" src="https://mgskjaeveland.github.io/sgvizler/v/0.7/sgvizler.js"></script>
   <script>
-  sgvizler
-  .prefix("meta", "http://www.snik.eu/ontology/meta/")
-  .prefix("ob", "http://www.snik.eu/ontology/ob/")
-  .prefix("bb", "http://www.snik.eu/ontology/bb/")
-  .prefix("he", "http://www.snik.eu/ontology/he/")
-  .prefix("it", "http://www.snik.eu/ontology/it/")
-  .prefix("ciox", "http://www.snik.eu/ontology/ciox/")
-  .prefix("hito", "http://hitontology.eu/ontology/")
-  .prefix("", "http://hitontology.eu/ontology/")
-	.prefix("skos", "http://www.w3.org/2004/02/skos/core#")
-	.defaultEndpointURL("https://hitontology.eu/sparql");
+    sgvizler
+      .prefix("meta", "http://www.snik.eu/ontology/meta/")
+      .prefix("ob", "http://www.snik.eu/ontology/ob/")
+      .prefix("bb", "http://www.snik.eu/ontology/bb/")
+      .prefix("he", "http://www.snik.eu/ontology/he/")
+      .prefix("it", "http://www.snik.eu/ontology/it/")
+      .prefix("ciox", "http://www.snik.eu/ontology/ciox/")
+      .prefix("hito", "http://hitontology.eu/ontology/")
+      .prefix("", "http://hitontology.eu/ontology/")
+      .prefix("skos", "http://www.w3.org/2004/02/skos/core#")
+      .defaultEndpointURL("https://hitontology.eu/sparql");
   </script>
   {% endif %}
   {% if page.use_sgvizler_table %}
   <script>
-  sgvizler
-  .defaultChartFunction("sgvizler.visualization.Table")
-  .defaultChartWidth(1000);
+    sgvizler
+      .defaultChartFunction("sgvizler.visualization.Table")
+      .defaultChartWidth(1000);
 
-  $(document).ready(function()
-  {
-    $("input[id^='sgvizler-button-']").each(function()
-    {
-      this.addEventListener("click",function() {sgvizler.containerDraw(this.id.replace("-button-","-div-"));},false);
+    $(document).ready(function () {
+      $("input[id^='sgvizler-button-']").each(function () {
+        this.addEventListener("click", function () { sgvizler.containerDraw(this.id.replace("-button-", "-div-")); }, false);
+      });
     });
-  });
   </script>
   {% endif %}
 

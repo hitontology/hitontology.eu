@@ -16,7 +16,8 @@ order: 5
 </a>
 </div>
 <div class="flex-item">
-  <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">Search for MEDFLOSS and commercial products
+  <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">
+  Search for MEDFLOSS and commercial products
   <img title="Faceted Search" alt="Faceted Search" src="public/search.jpg">
 </a>
 </div>

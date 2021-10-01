@@ -4,10 +4,10 @@ title: Publications
 order: 31
 ---
 <!-- use css for superduper collapsibles -->
-<link rel="stylesheet" href="{{ '/public/css/collapse.css' | relative_url }}">
+<link rel="stylesheet" href="public/css/collapse.css">
 ## Papers
 
-<p align="center"><iframe width="560" height="630" src="{{ '/public/paper_vdornauer.pdf' | relative_url }}" frameborder="0" allowfullscreen></iframe></p>
+<p align="center"><iframe width="560" height="630" src="public/paper_vdornauer.pdf" frameborder="0" allowfullscreen></iframe></p>
 
 * Dornauer V, Jahn F, Hoeffner K, Winter A, Ammenwerth E. <br>**Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies.**
 <p align="center"><a href="http://ebooks.iospress.nl/publication/54602">Link</a></p>
@@ -31,7 +31,7 @@ order: 31
     </div>
   </div>
 </div>
-<p align="center"><iframe width="560" height="630" src="{{ '/public/paper_fjahn.pdf' | relative_url }}" frameborder="0" allowfullscreen></iframe></p>
+<p align="center"><iframe width="560" height="630" src="public/paper_fjahn.pdf" frameborder="0" allowfullscreen></iframe></p>
 
 * Jahn F, Bindel M, Hoeffner K, Ghalandari M, Schneider B, Stäubert S, Dornauer V, Karopka T, Ammenwerth E, Winter A. <br>**Towards Precise Descriptions of Medical Free/Libre and Open Source Software.**
 <p align="center"><a href="https://ebooks.iospress.nl/publication/54205">Link</a></p>
@@ -57,8 +57,8 @@ order: 31
 ## Posters
 <figure>
 <center>
-<a href="{{ '/public/gmds-2019-poster-vd.svg' | relative_url }}">
-<img src="{{ '/public/gmds-2019-poster-vd-400.png' | relative_url }}" alt="Developing and implementing a health IT ontology for facilitating retrieval of health IT evaluation studies"/>
+<a href="public/gmds-2019-poster-vd.svg">
+<img src="public/gmds-2019-poster-vd-400.png" alt="Developing and implementing a health IT ontology for facilitating retrieval of health IT evaluation studies"/>
 </a>
 </center>
 <figcaption>
@@ -86,8 +86,8 @@ GMDS 2019, Dortmund.
 
 <figure>
 <center>
-<a href="{{ '/public/icimth-2019-poster-vd.svg' | relative_url }}">
-<img src="{{ '/public/icimth-2019-poster-vd-400.png' | relative_url }}" alt="Challenges and solutions while developing HITO&ndash;a Health IT Ontology"/>
+<a href="public/icimth-2019-poster-vd.svg">
+<img src="public/icimth-2019-poster-vd-400.png" alt="Challenges and solutions while developing HITO&ndash;a Health IT Ontology"/>
 </a>
 </center>
 <figcaption>
@@ -115,8 +115,8 @@ ICIMTH 2019, Athens. Best Poster Award.
 
 <figure>
 <center>
-<a href="{{ '/public/medinfo-2019-poster-ea.svg' | relative_url }}">
-<img src="{{ '/public/medinfo-2019-poster-ea-400.png' | relative_url }}" alt="An Ontology for Describing Health IT Interventions: Methodological Considerations"/>
+<a href="public/medinfo-2019-poster-ea.svg">
+<img src="public/medinfo-2019-poster-ea-400.png" alt="An Ontology for Describing Health IT Interventions: Methodological Considerations"/>
 </a>
 </center>
 <figcaption>
@@ -190,7 +190,7 @@ Use of Natural Language Processing for Precise Retrieval of Key Elements of Heal
   </div>
 </div>
 
-<p align="center"><iframe width="560" height="315" src="{{ '/public/presentation_fjahn.pdf' | relative_url }}" frameborder="0" allowfullscreen></iframe></p>
+<p align="center"><iframe width="560" height="315" src="public/presentation_fjahn.pdf" frameborder="0" allowfullscreen></iframe></p>
 
 An ontology for precise descriptions of medical free/libre open source software (Presentation by Franziska Jahn, Thomas Karopka et al.)
 <br>
