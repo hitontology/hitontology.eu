@@ -39,7 +39,7 @@ order: 5
 </a>
 </div>
 <div class="flex-item">
-<a title="Function-Catalogues" href="https://hitontology.eu/ontology/BbReferenceModelFunctionCatalogue">Function-Catalogues
+<a title="Function-Catalogues" href="https://hitontology.eu/ontology/EnterpriseFunctionCatalogue">Function-Catalogues
 <img title="Function-Catalogues" alt="Function-Catalogues" src="public/catalogue.jpg">
 </a>
 </div>
