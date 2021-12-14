@@ -43,5 +43,8 @@ node_modules
 # Jekyll
 .jekyll-metadata
 .jekyll-cache/
+
+# Other
+README.md
 Gemfile.lock
 package-lock.json
