@@ -8,4 +8,5 @@ WORKDIR /usr/src/app
 COPY . .
 
 EXPOSE 4000
-CMD ["bundle","exec","jekyll","serve","--incremental"]
+ENTRYPOINT ["bundle","exec","jekyll"]
+CMD ["serve","--incremental"]

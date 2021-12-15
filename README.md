@@ -9,8 +9,6 @@ It is a fork of the [Hyde layout](https://github.com/poole/hyde), which itself i
 2. Install Bundler
 3. Use Bundler to install the dependencies
 
-Alternatively, you can use the Dockerfile.
-
 ### Example for Arch Linux
 
     $ sudo pacman -S ruby
@@ -44,22 +42,51 @@ Install bundler and the gems:
     $ gem install --user-install bundler
     $ bundle install
 
-### Using Docker
-If you cannot or do not want to install Ruby and the gems on your system, or there is some problem with Ruby, you can also use the Dockerfile, which should work everywhere.
-Build the image in the project directory using `docker build -t hitontology.eu .`.
-
 ## Preview
-Switch to the `master` branch and run `bundle exec jekyll serve --incremental`, respectively `docker run --rm --network="host" hitontology.eu`.
+Switch to the `master` branch and run `bundle exec jekyll serve --incremental`.
 Check if everything looks normal.
 
 ## Build
 The GitHub workflow in `.github/workflows/deploy.yml` automatically builds the master branch and deploys it on the static branch.
-To build locally, run `bundle exec jekyll build (--incremental)`, respectively `docker run --rm -it --volume="$PWD:/usr/src/app" -it hitontology.eu build`.
+To build locally, run `bundle exec jekyll build (--incremental)`, 
 This will put the static HTML content into the `_site` folder.
 
 ### Deploy
 We serve the content of the static branch at the official HITO website <https://hitontology.eu>.
 The static branch is also automatically served using GitHub pages at <https://hitontology.github.io/hitontology.eu/>.
 
+### Using Docker
+If you cannot or do not want to install Ruby and the gems on your system, or there is some problem with Ruby, you can also use the Dockerfile, which should work everywhere.
+Use the following commands or execute the associated script.
+
+| goal         | command                                                                   | script                     |
+|--------------|---------------------------------------------------------------------------|----------------------------|
+| build image  | docker build -t hitontology.eu .                                          | scripts/docker-build       |
+| preview page | docker run --rm --network="host" hitontology.eu                           | scripts/docker-run-preview |
+| build page   | docker run --rm -it --volume="$PWD:/usr/src/app" -it hitontology.eu build | scripts/docker-run-build   |
+
 ## Integration of the Faceted Search
 If you publish it for the first time, go into the `hitontology.eu` directory and perform `git clone git@github.com:hitontology/facetedbrowsing.git search`. Then follow the installation instructions for the search.
+
+## Troubleshooting
+
+### Ruby cannot find the native extensions
+
+#### Exemplary error message
+
+   bundler: failed to load command: jekyll (/home/konrad/.local/share/gem/ruby/3.0.0/bin/jekyll)
+   /home/konrad/.local/share/gem/ruby/3.0.0/gems/ffi-1.15.1/lib/ffi.rb:5:in `require': libffi.so.7: cannot open shared object file: No such file or directory - /home/konrad/.local/share/gem/ruby/3.0.0/extensions/x86_64-linux/3.0.0/ffi-1.15.1/ffi_c.so (LoadError)
+
+This can happen if you already built the native extensions (e.g. via `bundle install`) with an older version of Ruby and then upgrade Ruby.
+Even `bundle install` will not rebuild the native extensions in that case if they are already present.
+To fix this, run `bundle pristine`.
+It is also possible that you installed some dependencies using `gem install` system- or user-wide, which bundler will not overwrite by default.
+In this case, even `bundle pristine` may not be enough.
+In our experience, this can be fixed by deinstalling Ruby, deleting all leftover gem directories and reinstalling Ruby afterwards.
+
+### Preview URL not working in MacOS using Docker
+
+Docker may run in it's own virtual machine under MacOS and not thus not forward `--network="host"` to the network of the machine itself.
+While the default way of port mapping in Docker using the `-p 4000:4000` gets forwarded to the local host under MacOS, this does not work with the underlying Jekyll server of this website.
+Thus, there may not be a way to preview the docker build using `jekyll serve` on MacOS.
+However you can still build it using Docker and use a local webserver to preview the `_site` folder.
