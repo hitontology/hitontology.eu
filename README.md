@@ -1,31 +1,32 @@
 # hitontology.eu
 
 This is the website for HITO – A Health IT Ontology for systematically describing application systems and software products in health IT.
-It is a fork of the [original Hyde layout](https://github.com/poole/hyde) that used to be a theme for Jekyll but is now standalone.
+It is a fork of the [Hyde layout](https://github.com/poole/hyde), which itself is based on Jekyll, a static site generator.
 
 ## Setup
+Clone this repository , e.g. `git clone git@github.com:hitontology/hitontology.eu.git`
+
 1. Install Ruby
-2. Install the Gems from the Gemfile
+2. Install Bundler
+3. Use Bundler to install the dependencies
+
+Alternatively, you can use the Dockerfile.
 
 ### Example for Arch Linux
 
     $ sudo pacman -S ruby
 
-Add the following to your environment configuration file, such as `.profile` or `.zshrc` and reload (source) it:
+Add the following to your environment configuration file, such as `.profile` or `.zshrc` and reload (`source ~/.zshrc`) it:
 
     export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
     export PATH="$PATH:$GEM_HOME/bin"
 
-Install the gems:
-
-    $ gem install jekyll jekyll-relative-links webrick
-
-Normally the recommended way is to use bundler with the provided Gemfile:
+Use bundler with the provided Gemfile:
 
     $ gem install bundler
     $ bundle install
 
-However that resulted in the error `Bundler::GemNotFound: Could not find jekyll-4.2.1.gem for installation` in testing.
+However that resulted in the error `Bundler::GemNotFound: Could not find jekyll-4.2.1.gem for installation` in testing on one machine.
 
 ### Example for MacOS (with Homebrew)
 
@@ -48,7 +49,7 @@ If you cannot or do not want to install Ruby and the gems on your system, you ca
 Build the image in the project directory using `docker build -t hitontology.eu .`.
 
 ## Preview
-Switch to the `master` branch and run `jekyll serve --incremental`, respectively `docker --rm --network="local" hitontology.eu`.
+Switch to the `master` branch and run `bundle exec jekyll serve --incremental`, respectively `docker run --rm --network="host" hitontology.eu`.
 Check if everyone looks normal.
 
 ## Build
