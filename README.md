@@ -4,7 +4,6 @@ This is the website for HITO – A Health IT Ontology for systematically describ
 It is a fork of the [Hyde layout](https://github.com/poole/hyde), which itself is based on Jekyll, a static site generator.
 
 ## Setup
-Clone this repository , e.g. `git clone git@github.com:hitontology/hitontology.eu.git`
 
 1. Install Ruby
 2. Install Bundler
@@ -35,9 +34,10 @@ Install Ruby:
     $ brew install ruby
 
 Add the brew ruby path to your shell configuration.
-If you're using Zsh:
+If you're using Zsh, add the following lines to `~/.zshrc`
 
-    $ echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+    export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+    export PATH="$PATH:$GEM_HOME/bin"
 
 Install bundler and the gems:
 
@@ -45,16 +45,16 @@ Install bundler and the gems:
     $ bundle install
 
 ### Using Docker
-If you cannot or do not want to install Ruby and the gems on your system, you can also use the Dockerfile.
+If you cannot or do not want to install Ruby and the gems on your system, or there is some problem with Ruby, you can also use the Dockerfile, which should work everywhere.
 Build the image in the project directory using `docker build -t hitontology.eu .`.
 
 ## Preview
 Switch to the `master` branch and run `bundle exec jekyll serve --incremental`, respectively `docker run --rm --network="host" hitontology.eu`.
-Check if everyone looks normal.
+Check if everything looks normal.
 
 ## Build
 The GitHub workflow in `.github/workflows/deploy.yml` automatically builds the master branch and deploys it on the static branch.
-To build locally, run `jekyll build (--incremental)`, respectively `docker run --rm -it --volume="$PWD:/usr/src/app" -it hitontology.eu jekyll build`.
+To build locally, run `bundle exec jekyll build (--incremental)`, respectively `docker run --rm -it --volume="$PWD:/usr/src/app" -it hitontology.eu build`.
 This will put the static HTML content into the `_site` folder.
 
 ### Deploy
@@ -77,3 +77,12 @@ This can happen if you already built the native extensions (e.g. via `bundle ins
 Even `bundle install` will not rebuild the native extensions in that case if they are already present.
 To fix this, run `bundle pristine`.
 It is also possible that you installed some dependencies using `gem install` system- or user-wide, which bundler will not overwrite by default.
+In this case, even `bundle pristine` may not be enough.
+In our experience, this can be fixed by deinstalling Ruby, deleting all leftover gem directories and reinstalling Ruby afterwards.
+
+### Preview URL not working in MacOS using Docker
+
+Docker may run in it's own virtual machine under MacOS and not thus not forward `--network="host"` to the network of the machine itself.
+While the default way of port mapping in Docker using the `-p 4000:4000` gets forwarded to the local host under MacOS, this does not work with the underlying Jekyll server of this website.
+Thus, there may not be a way to preview the docker build using `jekyll serve` on MacOS.
+However you can still build it using Docker and use a local webserver to preview the `_site` folder.
