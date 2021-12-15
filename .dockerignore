@@ -33,18 +33,9 @@ nbproject
 *.komodoproject
 .komodotools
 
-# grunt-html-validation
-validation-status.json
-validation-report.json
-
-# Folders to ignore
-node_modules
-
 # Jekyll
 .jekyll-metadata
 .jekyll-cache/
 
 # Other
 README.md
-Gemfile.lock
-package-lock.json
