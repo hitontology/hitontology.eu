@@ -4,7 +4,6 @@ This is the website for HITO – A Health IT Ontology for systematically describ
 It is a fork of the [Hyde layout](https://github.com/poole/hyde), which itself is based on Jekyll, a static site generator.
 
 ## Setup
-Clone this repository , e.g. `git clone git@github.com:hitontology/hitontology.eu.git`
 
 1. Install Ruby
 2. Install Bundler
@@ -35,9 +34,10 @@ Install Ruby:
     $ brew install ruby
 
 Add the brew ruby path to your shell configuration.
-If you're using Zsh:
+If you're using Zsh, add the following lines to `~/.zshrc`
 
-    $ echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+    export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+    export PATH="$PATH:$GEM_HOME/bin"
 
 Install bundler and the gems:
 
@@ -45,16 +45,16 @@ Install bundler and the gems:
     $ bundle install
 
 ### Using Docker
-If you cannot or do not want to install Ruby and the gems on your system, you can also use the Dockerfile.
+If you cannot or do not want to install Ruby and the gems on your system, or there is some problem with Ruby, you can also use the Dockerfile, which should work everywhere.
 Build the image in the project directory using `docker build -t hitontology.eu .`.
 
 ## Preview
 Switch to the `master` branch and run `bundle exec jekyll serve --incremental`, respectively `docker run --rm --network="host" hitontology.eu`.
-Check if everyone looks normal.
+Check if everything looks normal.
 
 ## Build
 The GitHub workflow in `.github/workflows/deploy.yml` automatically builds the master branch and deploys it on the static branch.
-To build locally, run `jekyll build (--incremental)`, respectively `docker run --rm -it --volume="$PWD:/usr/src/app" -it hitontology.eu jekyll build`.
+To build locally, run `bundle exec jekyll build (--incremental)`, respectively `docker run --rm -it --volume="$PWD:/usr/src/app" -it hitontology.eu build`.
 This will put the static HTML content into the `_site` folder.
 
 ### Deploy
