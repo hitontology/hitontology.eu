@@ -1,5 +1,8 @@
-# hitontology.eu
+<img align="right" width="200" height="200" src="https://avatars.githubusercontent.com/u/48351518?s=200&v=4" alt="HITO">
 
+# HITO Website
+
+Live on <https://hitontology.eu>.
 This is the website for HITO – A Health IT Ontology for systematically describing application systems and software products in health IT.
 It is a fork of the [Hyde layout](https://github.com/poole/hyde), which itself is based on Jekyll, a static site generator.
 
