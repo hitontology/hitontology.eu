@@ -1,31 +1,32 @@
 # hitontology.eu
 
 This is the website for HITO – A Health IT Ontology for systematically describing application systems and software products in health IT.
-It is a fork of the [original Hyde layout](https://github.com/poole/hyde) that used to be a theme for Jekyll but is now standalone.
+It is a fork of the [Hyde layout](https://github.com/poole/hyde), which itself is based on Jekyll, a static site generator.
 
 ## Setup
+Clone this repository , e.g. `git clone git@github.com:hitontology/hitontology.eu.git`
+
 1. Install Ruby
-2. Install the Gems from the Gemfile
+2. Install Bundler
+3. Use Bundler to install the dependencies
+
+Alternatively, you can use the Dockerfile.
 
 ### Example for Arch Linux
 
     $ sudo pacman -S ruby
 
-Add the following to your environment configuration file, such as `.profile` or `.zshrc` and reload (source) it:
+Add the following to your environment configuration file, such as `.profile` or `.zshrc` and reload (`source ~/.zshrc`) it:
 
     export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
     export PATH="$PATH:$GEM_HOME/bin"
 
-Install the gems:
-
-    $ gem install jekyll jekyll-relative-links webrick
-
-Normally the recommended way is to use bundler with the provided Gemfile:
+Use bundler with the provided Gemfile:
 
     $ gem install bundler
     $ bundle install
 
-However that resulted in the error `Bundler::GemNotFound: Could not find jekyll-4.2.1.gem for installation` in testing.
+However that resulted in the error `Bundler::GemNotFound: Could not find jekyll-4.2.1.gem for installation` in testing on one machine.
 
 ### Example for MacOS (with Homebrew)
 
@@ -48,7 +49,7 @@ If you cannot or do not want to install Ruby and the gems on your system, you ca
 Build the image in the project directory using `docker build -t hitontology.eu .`.
 
 ## Preview
-Switch to the `master` branch and run `jekyll serve --incremental`, respectively `docker --rm --network="local" hitontology.eu`.
+Switch to the `master` branch and run `bundle exec jekyll serve --incremental`, respectively `docker run --rm --network="host" hitontology.eu`.
 Check if everyone looks normal.
 
 ## Build
@@ -63,3 +64,16 @@ The static branch is also automatically served using GitHub pages at <https://hi
 ## Integration of the Faceted Search
 If you publish it for the first time, go into the `hitontology.eu` directory and perform `git clone git@github.com:hitontology/facetedbrowsing.git search`. Then follow the installation instructions for the search.
 
+## Troubleshooting
+
+### Ruby cannot find the native extensions
+
+Exemplary error message:
+
+   bundler: failed to load command: jekyll (/home/konrad/.local/share/gem/ruby/3.0.0/bin/jekyll)
+   /home/konrad/.local/share/gem/ruby/3.0.0/gems/ffi-1.15.1/lib/ffi.rb:5:in `require': libffi.so.7: cannot open shared object file: No such file or directory - /home/konrad/.local/share/gem/ruby/3.0.0/extensions/x86_64-linux/3.0.0/ffi-1.15.1/ffi_c.so (LoadError)
+
+This can happen if you already built the native extensions (e.g. via `bundle install`) with an older version of Ruby and then upgrade Ruby.
+Even `bundle install` will not rebuild the native extensions in that case if they are already present.
+To fix this, run `bundle pristine`.
+It is also possible that you installed some dependencies using `gem install` system- or user-wide, which bundler will not overwrite by default.
