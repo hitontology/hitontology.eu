@@ -7,7 +7,7 @@ order: 31
 <link rel="stylesheet" href="public/css/collapse.css">
 ## Papers
 
-<p align="center"><iframe width="560" height="630" src="public/paper_vdornauer.pdf" frameborder="0" allowfullscreen></iframe></p>
+<p align="center"><object width="100%" height="630" data="public/paper_vdornauer.pdf" frameborder="0" allowfullscreen></object></p>
 
 * Dornauer V, Jahn F, Hoeffner K, Winter A, Ammenwerth E. <br>**Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies.**
 <p align="center"><a href="http://ebooks.iospress.nl/publication/54602">Link</a></p>
@@ -31,7 +31,7 @@ order: 31
     </div>
   </div>
 </div>
-<p align="center"><iframe width="560" height="630" src="public/paper_fjahn.pdf" frameborder="0" allowfullscreen></iframe></p>
+<p align="center"><object width="100%" height="630" data="public/paper_fjahn.pdf" frameborder="0" allowfullscreen></object></p>
 
 * Jahn F, Bindel M, Hoeffner K, Ghalandari M, Schneider B, Stäubert S, Dornauer V, Karopka T, Ammenwerth E, Winter A. <br>**Towards Precise Descriptions of Medical Free/Libre and Open Source Software.**
 <p align="center"><a href="https://ebooks.iospress.nl/publication/54205">Link</a></p>
@@ -164,7 +164,7 @@ Array.from(myLabels).forEach(label => {
 ## Workshops/Presentations
 
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZcF0uyZMjvQ?rel=0;autoplay=1;modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<object width="100%" height="600" data="https://www.youtube.com/embed/ZcF0uyZMjvQ?rel=0;autoplay=1;modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></object></p>
 
 Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies (Workshop with V.Dornauer)
 <br>
@@ -190,7 +190,7 @@ Use of Natural Language Processing for Precise Retrieval of Key Elements of Heal
   </div>
 </div>
 
-<p align="center"><iframe width="560" height="315" src="public/presentation_fjahn.pdf" frameborder="0" allowfullscreen></iframe></p>
+<p align="center"><object width="100%" height="600" data="public/presentation_fjahn.pdf" frameborder="0" allowfullscreen></object></p>
 
 An ontology for precise descriptions of medical free/libre open source software (Presentation by Franziska Jahn, Thomas Karopka et al.)
 <br>
