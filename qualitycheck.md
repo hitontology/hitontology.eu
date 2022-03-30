@@ -70,11 +70,11 @@ The editors need to research and add features to the software products listed be
 <input type="button" id="sgvizler-button-undefinedobject" value="List Software Products with no Function" />
 <div id="sgvizler-div-undefinedobject"
          data-sgvizler-query="
-SELECT DISTINCT ?targetNode                                                                                                                                                                                                                                                                                                   
+SELECT DISTINCT ?targetNode
 FROM <http://hitontology.eu/ontology>
 {
  ?targetNode a hito:SoftwareProduct.
- MINUS {?resource hito:enterpriseFunction ?citation.}
+ MINUS {?resource hito:spSupportsEfCit ?citation.}
 }
 
 ">
@@ -132,7 +132,7 @@ SELECT *
 FROM <http://hitontology.eu/ontology>
 {
  ?p rdfs:domain ?domain.
- ?s ?p ?o.                                                                                                                                                                                                         
+ ?s ?p ?o.
  MINUS {?s a/rdfs:subClassOf* ?domain.}
 } ORDER BY ?p ?s
 ">
@@ -152,7 +152,7 @@ The offending triples should be removed or remodelled to conform to the range.
 <div id="sgvizler-div-range"
          data-sgvizler-query="
 select *
-FROM <http://hitontology.eu/ontology>                                                                                                                                                                                 
+FROM <http://hitontology.eu/ontology>
 {
  ?p rdfs:range ?range.
  filter(!strstarts(str(?range),'http://www.w3.org/2001/XMLSchema#'))
