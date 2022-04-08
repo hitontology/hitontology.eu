@@ -61,10 +61,9 @@ order: 5
 
 ---
 <center>
-  <a href="public/HITontology_V1V2_2021-06-21.svg" target="_blank">
-    <img src="public/HITontology_V1V2_2021-06-21.svg">
+  <a href="public/2022-03-30_HITO_Metamodel_complete_cardinalities.svg" target="_blank">
+    <img src="public/2022-03-30_HITO_Metamodel_complete_cardinalities.svg">
   </a>
-  The HITO-Diagram
+  The HITO diagram
 </center>
 ---
-<center><img src="public/hito-graph.png">The HITO-Graph</center>
