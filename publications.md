@@ -12,7 +12,7 @@ order: 31
 * Dornauer V, Jahn F, Hoeffner K, Winter A, Ammenwerth E. <br>**Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies.**
 <p align="center"><a href="http://ebooks.iospress.nl/publication/54602">Link</a></p>
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible0" class="toggle" type="checkbox">
   <label for="collapsible0" class="lbl-toggle">Open BibTeX</label>
   <div class="collapsible-content">
@@ -26,7 +26,8 @@ order: 31
         title = {Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies},<br>
         volume = {272},<br>
         journal = {Studies in health technology and informatics},<br>
-        doi = {10.3233/SHTI200502}}
+        doi = {10.3233/SHTI200502}<br>
+        }
       </p>
     </div>
   </div>
@@ -36,7 +37,7 @@ order: 31
 * Jahn F, Bindel M, Hoeffner K, Ghalandari M, Schneider B, Stäubert S, Dornauer V, Karopka T, Ammenwerth E, Winter A. <br>**Towards Precise Descriptions of Medical Free/Libre and Open Source Software.**
 <p align="center"><a href="https://ebooks.iospress.nl/publication/54205">Link</a></p>
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible0" class="toggle" type="checkbox">
   <label for="collapsible0" class="lbl-toggle">Open BibTeX</label>
   <div class="collapsible-content">
@@ -49,7 +50,8 @@ order: 31
         title = {Towards Precise Descriptions of Medical Free/Libre and Open Source Software},<br>
         volume = {270},<br>
         journal = {Digital Personalized Health and Medicine},<br>
-        doi = {10.3233/SHTI200203}}
+        doi = {10.3233/SHTI200203}<br>
+        }
       </p>
     </div>
   </div>
@@ -68,7 +70,7 @@ GMDS 2019, Dortmund.
 </figcaption>
 </figure>
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible1" class="toggle" type="checkbox">
   <label for="collapsible1" class="lbl-toggle">Open BibTeX</label>
   <div class="collapsible-content">
@@ -78,7 +80,8 @@ GMDS 2019, Dortmund.
           author    = "Verena Dornauer, Maryam Ghalandari, Konrad Höffner, Franziska Jahn, Alfred Winter, Elske Ammenwerth",<br>
           title     = "Developing and implementing a health {IT} ontology for facilitating retrieval of health {IT} evaluation studies",<br>
           booktitle = "64. Jahrestagung der Deutschen Gesellschaft für Medizinische Informatik, Biometrie und Epidemiologie e. V. (GMDS)",<br>
-          year      = "2019"}
+          year      = "2019"<br>
+      }
       </p>
     </div>
   </div>
@@ -97,7 +100,7 @@ ICIMTH 2019, Athens. Best Poster Award.
 </figcaption>
 </figure>
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible2" class="toggle" type="checkbox">
   <label for="collapsible2" class="lbl-toggle">Open BibTeX</label>
   <div class="collapsible-content">
@@ -127,7 +130,7 @@ Amsterdam: IOS Press. pp. 1419-20.
 </figcaption>
 </figure>
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible3" class="toggle" type="checkbox">
   <label for="collapsible3" class="lbl-toggle">Open BibTeX</label>
   <div class="collapsible-content">
@@ -170,7 +173,7 @@ Use of Natural Language Processing for Precise Retrieval of Key Elements of Heal
 <br>
 <p align="center"><a href="https://www.youtube.com/watch?v=ZcF0uyZMjvQ">Link</a></p>
 
-<div class="wrap-collabsible">
+<div class="wrap-collapsible">
   <input id="collapsible4" class="toggle" type="checkbox">
   <label for="collapsible4" class="lbl-toggle">Open BibTeX</label>
   <div class="collapsible-content">
@@ -184,7 +187,8 @@ Use of Natural Language Processing for Precise Retrieval of Key Elements of Heal
         title = {Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies},<br>
         volume = {272},<br>
         journal = {Studies in health technology and informatics},<br>
-        doi = {10.3233/SHTI200502}}
+        doi = {10.3233/SHTI200502}<br>
+        }
       </p>
     </div>
   </div>
