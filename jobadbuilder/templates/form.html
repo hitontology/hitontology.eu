@@ -2,11 +2,12 @@
 	<!-- Root Class Position -->
 	<legend>Position</legend>
 	<div typeof="hito:ImPosition" resource="Position-{pid}">
-		<input name="pid" type="hidden" value="{foaf:name}" />
+		<input name="pid" type="hidden" value="{rdfs:label}" />
 
 		<!-- literal property -->
-		<label>Name</label>
-		<input name="foaf:name" type="literal" datatype="xsd:string" required />
+		<label>Position / Job title</label>
+		<input name="rdfs:label" type="literal" datatype="xsd:string" required />
+
 		<!--
 		<label>Gender</label>
 		<input name="foaf:gender" type="literal" select select-options='{"female":"Female", "male":"Male", "other": "Other"}' datatype="xsd:string" />
@@ -93,7 +94,7 @@
 		<input name="rdfs:comment" type="literal" textarea />
 	</div>
 
-	<legend>Competency</legend>
+	<legend>Competence in...</legend>
 	<div typeof="hito:Competency" resource="Competency-{pid}" id="CompetencyEvent" external>
 		<p class="help">Adds the competency to the Position.</p>
 
