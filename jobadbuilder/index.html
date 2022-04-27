@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<style type="text/css">
+			.container {
+				border: 1px solid lightGray;
+				padding: 2% 8%;
+				border-radius: 10px;
+				margin: 10px auto;
+				background: white;
+				max-width: 1900px;
+			}
+			.competence-select {
+				min-width: 40em;
+			}
+			.competence-label {
+				min-width: 15em;
+				display: inline-block;
+			}
+			#jobad {
+				min-width: 100em;
+				min-height: 25em;
+				margin-top: 1em;
+			}
+		</style>
+
+		<title>HITO Job Ad Builder</title>
+	</head>
+	<body>
+		<div class="container">
+			<center>
+				<h1>HITO Job Ad Builder</h1>
+				<h2>Want to hire a Health IT professional? Create a job profile that fits.</h2>
+			</center>
+
+			<form base="http://hitontology.eu/ontology/" id="competenceForm">
+				<input name="pid" type="hidden" value="{rdfs:label}" />
+
+				<label>Position / Job title</label>
+				<input name="rdfs:label" type="literal" datatype="xsd:string" required />
+
+				<input name="hito:competency" type="resource" value="hito:Competency" arguments='{"pid":"{pid}"}' multiple />
+
+				<label>SNIK Blue Book Role</label>
+				<!-- select ?x STR(?label) FROM <http://www.snik.eu/ontology/bb> {?x a meta:Role; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))} -->
+				<input
+					name="hito:snikRole"
+					id="hito:snikRole"
+					type="resource"
+					select
+					select-options='{"AdministrativeStaff":"Administrative Staff", 
+"Cchit":"CCHIT", 
+"Ccow":"CCOW", 
+"Cen":"CEN", 
+"Fundingestitution":"Funding Institution", 
+"WardPhysician":"Ward Physician"}'
+					external
+				/>
+
+				<!-- literal property as textarea -->
+				<label>Comment</label>
+				<input name="rdfs:comment" type="literal" textarea />
+
+				<legend>Competence in...</legend>
+				<p>
+					<!--
+				<label>Level</label>
+				<input
+					name="hito:competencyLevel"
+					id="hito:competencyLevel"
+					type="resource"
+					select
+					select-options='{"remember":"Remember", "understand":"Understand", "apply": "Apply", "analyze":"Analyze", "evaluate":"Evaluate", "create":"Create"}'
+					external
+				/>
+
+				<label>Interoperability</label>
+				<input
+					name="hito:competencyInteroperability"
+					type="resource"
+					select
+					select-options='{
+"ATC":"ATC",
+"CAM":"CAM",
+"CCA":"CCA",
+"CCAM":"CCAM",
+"CCR":"CCR",
+"CDA":"HL7 CDA",
+"CDISC_LAB":"CDISC LAB",
+"CDISC_ODM":"CDISC ODM",
+"CGNS":"CGNS",
+"CMS3_0":"CMS 3.0",
+"CORBA":"CORBA",
+"CertifiedHITProduct":"Certified HIT Product",
+"Continua":"Continua",
+}'
+					external
+				/>
+				<label>Programming Language</label>
+				<input name="hito:competencyProgrammingLanguage" type="resource" external select select-options='{"cpp":"C++", "somethingelse":"Something Else"}' />
+-->
+				</p>
+			</form>
+			<textarea id="jobad"></textarea>
+		</div>
+
+		<script src="js/main.js"></script>
+
+		<script type="text/javascript">
+			window.addEventListener("load", main);
+		</script>
+	</body>
+</html>
