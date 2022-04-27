@@ -1,0 +1,253 @@
+<form base="http://hitontology.eu/ontology/">
+	<!-- Root Class Position -->
+	<legend>Position</legend>
+	<div typeof="hito:ImPosition" resource="Position-{pid}">
+		<input name="pid" type="hidden" value="{foaf:name}" />
+
+		<!-- literal property -->
+		<label>Name</label>
+		<input name="foaf:name" type="literal" datatype="xsd:string" required />
+		<!--
+		<label>Gender</label>
+		<input name="foaf:gender" type="literal" select select-options='{"female":"Female", "male":"Male", "other": "Other"}' datatype="xsd:string" />
+
+		<label>E-Mail</label>
+		<input name="foaf:mbox" type="literal" placeholder="name@example.org" additional />
+		-->
+		<!-- resource property -->
+		<input name="hito:competency" type="resource" value="hito:Competency" arguments='{"pid":"{pid}"}' multiple />
+
+		<!--<input name="bio:event" type="resource" value="bio:Event" arguments='{"pid":"{pid}"}' additional multiple />-->
+
+		<label>SNIK Blue Book Role</label>
+		<!-- select ?x STR(?label) FROM <http://www.snik.eu/ontology/bb> {?x a meta:Role; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))} -->
+		<input
+			name="hito:snikRole"
+			id="hito:snikRole"
+			type="resource"
+			select
+			select-options='{"AdministrativeStaff":"Administrative Staff", 
+"Cchit":"CCHIT", 
+"Ccow":"CCOW", 
+"Cen":"CEN", 
+"ChiefExecutiveOfficer":"Chief Executive Officer", 
+"ChiefFinancialOfficer":"Chief Financial Officer",                                                                                                            "ChiefInformationOfficer":"Chief Information Officer", 
+"ClinicalDepartment":"Clinical Department", 
+"ComputingCenterManager":"Computing Center Manager", 
+"DataSecurityOfficer":"Data Security Officer", 
+"DepartmentalSystemAdministrator":"Departmental System Administrator", 
+"EuroRec":"EuroRec", 
+"Fundingestitution":"Funding Institution", 
+"GeneralPractice":"General Practice", 
+"GovernmentalAuthority":"Governmental Authority", 
+"HardwareVendor":"Hardware Vendor", 
+"HealthCareInstitution":"Health Care Institution", 
+"HealthCareNetwork":"Health Care Network", 
+"HealthCareProfessional":"Health Care Professional", 
+"HealthsuranceCompany":"Health Insurance Company", 
+"HealthcareServicesSpecificationProject":"Healthcare Services Specification Project", 
+"HisStakeholder":"HIS Stakeholder", 
+"HomeCareInstitution":"Home Care Institution", 
+"Hospital":"Hospital", 
+"HospitalStaff":"Hospital Staff", 
+"HospitalsBoardOfDirectors":"Hospital’s Board of Directors", 
+"Ihe":"IHE", 
+"IndependentHealthRecordBank":"Independent Health Record Bank", 
+"InformationDesk":"Information Desk", 
+"InformationManagementBoard":"Information Management Board", 
+"InformationManagementDepartment":"Department of Information management", 
+"InformationManagementStaff":"Information Management Staff", 
+"InpatientCareInstitution":"Inpatient Care Institution", 
+"IntegratedCareNetwork":"Integrated Care Network", 
+"IntegratedHealthCareDeliverySystem":"Integrated Health Care Delivery System", 
+"InternationalDICOMCommittee":"International DICOM Committee", 
+"ItServiceManagementStaff":"IT Service Management Staff", 
+"JointCommission":"Joint Commission", 
+"ManagementUnit":"Management Unit", 
+"MedicalInformatician":"Medical Informatician", 
+"NeutralIhrbActor":"neutral independent health bank actor", 
+"Nurse":"Nurse", 
+"NursingCenter":"Nursing Center", 
+"OperationalInformationManagementStaff":"Operational Information Management Staff", 
+"Organization":"Organization", 
+"OutpatientCareInstitution":"Outpatient Care Institution", 
+"Pharmacy":"Pharmacy", 
+"Physician":"Physician", 
+"ProjectManagementBoard":"Project Management Board", 
+"ProjectManager":"Project Manager", 
+"RehabilitationCenter":"Rehabilitation Center", 
+"RepresentativeOfHospitalDepartment":"Representative of Hospital Department", 
+"Researchstitution":"Research Institution", 
+"SeniorPhysician":"Senior Physician", 
+"ServiceDeskStaff":"Service Desk Staff", 
+"SoftwareVendor":"Software Vendor", 
+"Surgeon":"Surgeon", 
+"TopManagement":"Top Management", 
+"Vendor":"Vendor", 
+"WardPhysician":"Ward Physician"}'
+			external
+		/>
+
+		<!-- literal property as textarea -->
+		<label>Comment</label>
+		<input name="rdfs:comment" type="literal" textarea />
+	</div>
+
+	<legend>Competency</legend>
+	<div typeof="hito:Competency" resource="Competency-{pid}" id="CompetencyEvent" external>
+		<p class="help">Adds the competency to the Position.</p>
+
+		<label>Level</label>
+		<input
+			name="hito:competencyLevel"
+			id="hito:competencyLevel"
+			type="resource"
+			select
+			select-options='{"remember":"Remember", "understand":"Understand", "apply": "Apply", "analyze":"Analyze", "evaluate":"Evaluate", "create":"Create"}'
+			external
+		/>
+
+		<!-- select ?x (STR(?label) AS ?l) {?x a hito:Interoperability; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))} -->
+		<label>Interoperability</label>
+		<input
+			name="hito:competencyInteroperability"
+			type="resource"
+			select
+			select-options='{
+"ATC":"ATC",
+"CAM":"CAM",
+"CCA":"CCA",
+"CCAM":"CCAM",
+"CCR":"CCR",
+"CDA":"HL7 CDA",
+"CDISC_LAB":"CDISC LAB",
+"CDISC_ODM":"CDISC ODM",
+"CGNS":"CGNS",
+"CMS3_0":"CMS 3.0",
+"CORBA":"CORBA",
+"CertifiedHITProduct":"Certified HIT Product",
+"Continua":"Continua",
+"DICOM":"DICOM",
+"EDI":"EDI",
+"GDF":"GDF",
+"GDT":"GDT",
+"HIPAA":"HIPAA",
+"HL7":"HL7",
+"HL7_Arden":"HL7 Arden Syntax",
+"HL7_CCD":"HL7 CCD",
+"HL7_CTS2":"HL7 CTS2",
+"HL7_FHIR":"HL7 FHIR",
+"HL7_V2.x":"HL7 V2.x",
+"HL7_V3.0":"HL7 V3.0",
+"HPRIM":"HPRIM",
+"HPRIM-XML":"HPRIM-XML",
+"HPRIM2_1":"HPRIM-2.1",
+"HSCIC_ITK":"HSCIC-ITK",
+"HXP":"HXP",
+"ICD":"ICD",
+"ICD10":"ICD10",
+"ICD10PCS":"ICD10PCS",
+"ICD11":"ICD11",
+"ICD9":"ICD9",
+"ICPC2":"ICPC-2",
+"ICPM":"ICPM",
+"IEPD":"IEPD",
+"IHE":"IHE",
+"IHE_ATNA":"IHE-ATNA",
+"IHE_BPPC":"IHE-BPPC",
+"IHE_CT":"IHE-CT",
+"IHE_EDR":"IHE-EDR",
+"IHE_MHD":"IHE-MHD",
+"IHE_MPQ":"IHE-MPQ",
+"IHE_PAM":"IHE-PAM",
+"IHE_PCD":"IHE-PCD",
+"IHE_PDQ":"IHE-PDQ",
+"IHE_PDQm":"IHE-PDQm",
+"IHE_PDQv3":"IHE-PDQv3",
+"IHE_PIX":"IHE-PIX",
+"IHE_PIXm":"IHE-PIXm",
+"IHE_PIXv3":"IHE-PIXv3",
+"IHE_QED":"IHE-QED",
+"IHE_RO":"IHE-RO",
+"IHE_SVS":"IHE-SVS",
+"IHE_XCA":"IHE-XCA",
+"IHE_XCA_I":"IHE-XCA-I",
+"IHE_XCF":"IHE-XCF",
+"IHE_XCPD":"IHE-XCPD",
+"IHE_XDR":"IHE-XDR",
+"IHE_XDS":"IHE-XDS",
+"IHE_XDS_I":"IHE-XDS-I",
+"IHE_XDS_MS":"IHE-XDS-MS",
+"IHE_XDS_SD":"IHE-XDS-SD",
+"IHE_XDSa":"IHE-XDS.a",
+"IHE_XDSb":"IHE-XDS.b",
+"IHE_XPID":"IHE-XPID",
+"IHE_XUA":"IHE-XUA",
+"ISO13606":"ISO 13606",
+"ISOIEC11756_1999":"ISO/IEC 11756:1999",
+"KML":"KML",
+"LOINC":"LOINC",
+"MPPS":"MPPS",
+"MedDRA":"MedDRA",
+"NDR":"NDR",
+"NGAP":"NGAP",
+"NHS":"NHS",
+"NIEM":"NIEM",
+"NIfTI":"NIfTI",
+"OASIS":"OASIS",
+"OMOP":"OMOP",
+"OPCS4":"OPCS4",
+"OPS":"OPS",
+"OpenEHR":"Open EHR",
+"PN13":"PN13",
+"REST":"REST",
+"SAML":"SAML",
+"SCP_ECG":"SCP-ECG",
+"SDMX_HD":"SDMX-HD",
+"SMART":"SMART",
+"SNOMED_CT":"SNOMED CT",
+"SOAP":"SOAP",
+"STS":"STS",
+"SVG":"SVG",
+"TARMED":"TARMED",
+"UMLS":"UMLS",
+"UniprotKB":"UniprotKB",
+"WADO":"WADO",
+"WHOICF":"WHO ICF",
+"WSDL":"WSDL",
+"X12":"X12",
+"XACML":"XACML",
+"XML":"XML",
+"XPath":"XPath",
+"XSD":"XSD",
+"YAML":"YAML"
+}'
+			external
+		/>
+		<label>Programming Language</label>
+		<input name="hito:competencyProgrammingLanguage" type="resource" external select select-options='{"cpp":"C++", "somethingelse":"Something Else"}' />
+		<label>Software Product</label>
+		<input name="hito:competencySoftwareProduct" type="resource" external select select-options='{"bahmni":"Bahmni", "somethingelse":"Something Else"}' />
+		<label>Enterprise Function</label>
+		<input name="hito:competencyEfCla" type="resource" external select select-options='{"makemoney":"Make Money", "somethingelse":"Something Else"}' />
+		<label>Application System Type</label>
+		<input name="hito:competencyAstCla" type="resource" external select select-options='{"...":"...", "somethingelse":"Something Else"}' />
+		<label>Database System</label>
+		<input name="hito:competencyDb" type="resource" external select select-options='{"mysql":"MySQL", "postgresql":"PostgreSQL"}' />
+	</div>
+
+	<!-- Resource Class Event -->
+	<legend>Event</legend>
+	<div typeof="bio:Event" resource="Event-{rdfs:label}-{pid}" id="EventEvent">
+		<p class="help">Adds a biographical event to the Position. It may has a start and/or end date.</p>
+
+		<label>Title</label>
+		<input name="rdfs:label" type="literal" datatype="xsd:string" placeholder="Title" />
+
+		<label>From</label>
+		<input name="dc:date" type="literal" datatype="xsd:gYear" placeholder="JJJJ" />
+
+		<label>To</label>
+		<input name="dc:date" type="literal" datatype="xsd:gYear" placeholder="JJJJ" />
+	</div>
+</form>
