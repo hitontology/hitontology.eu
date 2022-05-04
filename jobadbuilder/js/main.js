@@ -39,6 +39,13 @@ const COMPETENCE_AREAS = {
 		property: "hito:competencyEfCla",
 		endpoint: ENDPOINT_HITO,
 	},
+	role: {
+		label: "Role",
+		//query: `SELECT ?x (STR(?label) AS ?l) FROM <http://www.snik.eu/ontology/bb> {?x a meta:Role; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		query: `SELECT ?x (STR(?label) AS ?l) FROM <http://www.snik.eu/ontology/bb> {?x rdfs:subClassOf* bb:HospitalStaff; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		property: "hito:competencyRole",
+		endpoint: ENDPOINT_SNIK,
+	},
 };
 
 async function select(query, endpoint, graph) {
@@ -81,33 +88,80 @@ const classes = {
 	},
 };
 
-async function main() {
-	const form = document.getElementById("competenceForm");
+function copy() {
 	const jobad = document.getElementById("jobad");
-	for (let area of Object.values(COMPETENCE_AREAS)) {
-		const div = document.createElement("div");
-		form.append(div);
-		const label = document.createElement("label");
-		label.classList.add("competence-label");
-		const input = document.createElement("select");
-		input.classList.add("competence-select");
-		const bindings = await select(area.query);
-		label.innerText = area.label;
-		//console.log(bindings);
-		for (let b of bindings) {
-			const option = document.createElement("option");
-			//option.value = b.x.value;
-			option.value = b.l.value;
-			option.innerText = b.l.value;
-			input.append(option);
-		}
-		const addButton = document.createElement("button");
+	jobad.select();
+	jobad.setSelectionRange(0, 99999);
+	navigator.clipboard.writeText(jobad.value);
+	jobad.selectionStart = jobad.selectionEnd;
+}
+
+function emptyOption(text) {
+	const emptyOption = document.createElement("option");
+	emptyOption.setAttribute("disabled", "");
+	emptyOption.setAttribute("selected", "");
+	emptyOption.innerText = text;
+	emptyOption.value = 0;
+	return emptyOption;
+}
+
+function levelOption(i) {
+	const levels = ["knows", "understands", "applies", "analyses", "evaluates", "creates"];
+	const option = document.createElement("option");
+	option.value = levels[i - 1];
+	option.innerText = i + ") " + levels[i - 1];
+	return option;
+}
+
+async function row(area) {
+	const div = document.createElement("div");
+	const label = document.createElement("label");
+	label.classList.add("competence-label");
+	const input = document.createElement("select");
+	input.classList.add("competence-select");
+	const bindings = await select(area.query, area.endpoint);
+	label.innerText = area.label;
+	input.append(emptyOption("Select " + area.label));
+	for (let b of bindings) {
+		const option = document.createElement("option");
+		//option.value = b.x.value;
+		option.value = b.l.value;
+		option.innerText = b.l.value;
+		input.append(option);
+	}
+	const levelInput = document.createElement("select");
+	levelInput.append(emptyOption("Select competence level"));
+	for (let i = 1; i < 7; i++) {
+		levelInput.append(levelOption(i));
+	}
+	const addButton = document.createElement("button");
+	{
 		addButton.innerText = "Add";
 		addButton.type = "button";
 		addButton.addEventListener("click", () => {
-			jobad.value += " * " + area.label + ": " + input.value + "\n";
+			if (input.value == 0 || levelInput.value == 0) return;
+			jobad.value += " * " + levelInput.value + " " + area.label + ": " + input.value + "\n";
+			input.value = 0;
+			levelInput.value = 0;
 		});
-		div.append(label, input, addButton);
-		//console.log(bindings);
+	}
+	div.append(label, input, levelInput, addButton);
+	const title = document.getElementById("jobtitle");
+	title.addEventListener("change", (event) => {
+		const newtitle = title.value;
+		if (newtitle == "") return;
+		const oldad = jobad.value;
+		jobad.value = newtitle + "\n" + oldad;
+		title.value = "";
+	});
+	return div;
+}
+
+//<input name="hito:competency" type="resource" value="hito:Competency" arguments='{"pid":"{pid}"}' multiple />
+async function main() {
+	const container = document.getElementById("competenceContainer");
+	const jobad = document.getElementById("jobad");
+	for (let area of Object.values(COMPETENCE_AREAS)) {
+		container.append(await row(area));
 	}
 }

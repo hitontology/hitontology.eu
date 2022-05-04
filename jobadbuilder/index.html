@@ -13,18 +13,23 @@
 				margin: 10px auto;
 				background: white;
 				max-width: 1900px;
+				max-width: 90vw;
 			}
 			.competence-select {
-				min-width: 40em;
+				width: 30em;
 			}
 			.competence-label {
 				min-width: 15em;
 				display: inline-block;
 			}
 			#jobad {
-				min-width: 100em;
+				min-width: 52em;
 				min-height: 25em;
 				margin-top: 1em;
+				max-width: 95%;
+			}
+			#competenceContainer {
+				margin: 0.5em;
 			}
 		</style>
 
@@ -41,71 +46,15 @@
 				<input name="pid" type="hidden" value="{rdfs:label}" />
 
 				<label>Position / Job title</label>
-				<input name="rdfs:label" type="literal" datatype="xsd:string" required />
+				<input name="rdfs:label" type="literal" datatype="xsd:string" id="jobtitle" required />
 
-				<input name="hito:competency" type="resource" value="hito:Competency" arguments='{"pid":"{pid}"}' multiple />
-
-				<label>SNIK Blue Book Role</label>
-				<!-- select ?x STR(?label) FROM <http://www.snik.eu/ontology/bb> {?x a meta:Role; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))} -->
-				<input
-					name="hito:snikRole"
-					id="hito:snikRole"
-					type="resource"
-					select
-					select-options='{"AdministrativeStaff":"Administrative Staff", 
-"Cchit":"CCHIT", 
-"Ccow":"CCOW", 
-"Cen":"CEN", 
-"Fundingestitution":"Funding Institution", 
-"WardPhysician":"Ward Physician"}'
-					external
-				/>
-
-				<!-- literal property as textarea -->
-				<label>Comment</label>
-				<input name="rdfs:comment" type="literal" textarea />
-
-				<legend>Competence in...</legend>
 				<p>
-					<!--
-				<label>Level</label>
-				<input
-					name="hito:competencyLevel"
-					id="hito:competencyLevel"
-					type="resource"
-					select
-					select-options='{"remember":"Remember", "understand":"Understand", "apply": "Apply", "analyze":"Analyze", "evaluate":"Evaluate", "create":"Create"}'
-					external
-				/>
-
-				<label>Interoperability</label>
-				<input
-					name="hito:competencyInteroperability"
-					type="resource"
-					select
-					select-options='{
-"ATC":"ATC",
-"CAM":"CAM",
-"CCA":"CCA",
-"CCAM":"CCAM",
-"CCR":"CCR",
-"CDA":"HL7 CDA",
-"CDISC_LAB":"CDISC LAB",
-"CDISC_ODM":"CDISC ODM",
-"CGNS":"CGNS",
-"CMS3_0":"CMS 3.0",
-"CORBA":"CORBA",
-"CertifiedHITProduct":"Certified HIT Product",
-"Continua":"Continua",
-}'
-					external
-				/>
-				<label>Programming Language</label>
-				<input name="hito:competencyProgrammingLanguage" type="resource" external select select-options='{"cpp":"C++", "somethingelse":"Something Else"}' />
--->
+					<legend>Competence in...</legend>
+					<span id="competenceContainer"> </span>
 				</p>
 			</form>
 			<textarea id="jobad"></textarea>
+			<button onclick="copy()">Copy</button>
 		</div>
 
 		<script src="js/main.js"></script>
