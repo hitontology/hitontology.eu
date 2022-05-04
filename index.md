@@ -34,6 +34,11 @@ order: 5
 </a>
 </div>
 <div class="flex-item">
+  <a title="Glossary" href= "https://imise.github.io/glossar/hito/" target="_blank">Glossary
+  <img title="Glossary" alt="Glossary" src="public/browse.png">
+</a>
+</div>
+<div class="flex-item">
 <a title="Feature-Catalogues" href="https://hitontology.eu/ontology/FeatureCatalogue">Feature-Catalogues
 <img title="Feature-Catalogues" alt="Feature-Catalogues" src="public/catalogue.jpg">
 </a>
