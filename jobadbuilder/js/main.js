@@ -35,7 +35,7 @@ const COMPETENCE_AREAS = {
 			["has basic knowledge of"],
 			["has advanced knowledge of", "has expert knowledge of"],
 			["basic skills in", "advanced skills in", "expert skills in", "experienced with ... at basic level", "experienced with ... at advanced level", "experienced with ... at master level"],
-			["analyzes", "selects", "tests", "maintains"],
+			["analyzes", "selects", "tests", "maintains", "provide first level support for", "provide second level support for", "provide third level support for"],
 			["evaluates the use of", "assesses the use of"],
 			["plans the use of", "creates", "creates a vision about the use of", "decides about the use of"],
 		],
@@ -192,6 +192,7 @@ function levelSelect(area) {
 	for (let i = 1; i < 7; i++) {
 		for (let l of area.levels[i - 1]) {
 			const option = document.createElement("option");
+			option.classList.add("level-option");
 			option.value = l;
 			if (!option.value.includes("...")) option.value += " ...";
 			option.innerText = i + ") " + l;
@@ -201,8 +202,7 @@ function levelSelect(area) {
 	return levelInput;
 }
 
-async function row(area) {
-	const div = document.createElement("div");
+async function rowEles(area) {
 	const label = document.createElement("label");
 	label.classList.add("competence-label");
 	const input = document.createElement("select");
@@ -212,6 +212,7 @@ async function row(area) {
 	input.append(emptyOption("Select " + area.label));
 	for (let b of bindings) {
 		const option = document.createElement("option");
+		option.classList.add("competence-option");
 		//option.value = b.x.value;
 		option.value = b.l.value;
 		option.innerText = b.l.value;
@@ -223,6 +224,7 @@ async function row(area) {
 	{
 		addButton.innerText = "Add";
 		addButton.type = "button";
+		addButton.classList.add("add-button");
 		addButton.addEventListener("click", () => {
 			if (input.value == 0 || levelInput.value == 0) return;
 			jobad.value += " * " + levelInput.value.replace("...", input.value) + "\n";
@@ -230,7 +232,6 @@ async function row(area) {
 			levelInput.value = 0;
 		});
 	}
-	div.append(label, input, levelInput, addButton);
 	const title = document.getElementById("jobtitle");
 	title.addEventListener("change", (event) => {
 		const newtitle = title.value;
@@ -239,14 +240,12 @@ async function row(area) {
 		jobad.value = newtitle + "\n" + oldad;
 		title.value = "";
 	});
-	return div;
+	return [label, input, levelInput, addButton];
 }
 
 //<input name="hito:competency" type="resource" value="hito:Competency" arguments='{"pid":"{pid}"}' multiple />
 async function main() {
 	const container = document.getElementById("competenceContainer");
 	const jobad = document.getElementById("jobad");
-	for (let area of Object.values(COMPETENCE_AREAS)) {
-		container.append(await row(area));
-	}
+	(await Promise.all(Object.values(COMPETENCE_AREAS).map((area) => rowEles(area)))).forEach((eles) => container.append(...eles));
 }
