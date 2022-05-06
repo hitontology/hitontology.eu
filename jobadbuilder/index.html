@@ -27,14 +27,20 @@
 				text-align: left;
 				display: grid;
 				grid-template-columns: auto auto auto auto;
-				max-width: min(70em, 90vw);
+				max-width: min(80em, 90vw);
 			}
 			.competence-label {
 				display: inline-block;
 				white-space: nowrap;
 			}
-			/*.competence-select,	.competence-option {}*/
-			/*.level-select {}*/
+			.competence-select,
+			.competence-option {
+				max-width: 35em;
+			}
+			.level-select,
+			.level-option {
+				max-width: 25em;
+			}
 			.add-button {
 				width: 3em;
 			}
@@ -60,10 +66,6 @@
 			<button onclick="copy()">Copy</button>
 		</div>
 
-		<script src="js/main.js"></script>
-
-		<script type="text/javascript">
-			window.addEventListener("load", main);
-		</script>
+		<script src="js/main.js" type="module"></script>
 	</body>
 </html>
