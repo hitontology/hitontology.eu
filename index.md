@@ -58,6 +58,11 @@ order: 5
 <img title="Download" alt="Download" src="public/download.png">
 </a>
 </div>
+<div class="flex-item">
+<a title="Job Ad Builder" href="jobadbuilder/index.html">Job Ad Builder<br>
+<img title="Job Ad Builder" alt="Job Ad Builder" src="public/browse.png">
+</a>
+</div>
 </div>
 <br>
 
