@@ -61,14 +61,18 @@ function levelSelect(area) {
 	const levelInput = document.createElement("select");
 	levelInput.classList.add("level-select");
 	levelInput.append(emptyOption("Select competence level"));
-	for (let i = 1; i < 7; i++) {
-		for (let l of area.levels[i - 1]) {
-			const option = document.createElement("option");
-			option.classList.add("level-option");
-			option.value = l;
-			if (!option.value.includes("...")) option.value += " ...";
-			option.innerText = i + ") " + l;
-			levelInput.append(option);
+	for (let i = 0; i < 6; i++) {
+		for (let level of area.levels[i]) {
+			let sublevels = [level];
+			if (level.includes("*")) sublevels = [level.replace("*", "§"), level.replace("*", "$")];
+			for (let l of sublevels) {
+				const option = document.createElement("option");
+				option.classList.add("level-option");
+				option.value = l;
+				if (!option.value.match(/[$*§]/)) option.value += " §";
+				option.innerText = ["I", "II", "III", "IV", "V", "VI"][i] + " " + l.replace("§", "...").replace("$", area.plural) + "\n";
+				levelInput.append(option);
+			}
 		}
 	}
 	return levelInput;
@@ -79,9 +83,10 @@ async function rowEles(area) {
 	label.classList.add("competence-label");
 	const input = document.createElement("select");
 	input.classList.add("competence-select");
-	const bindings = await select(area.query, area.endpoint);
 	label.innerText = area.label;
 	input.append(emptyOption("Select " + area.label));
+
+	const bindings = await select(area.query, area.endpoint);
 	for (let b of bindings) {
 		const option = document.createElement("option");
 		option.classList.add("competence-option");
@@ -98,8 +103,8 @@ async function rowEles(area) {
 		addButton.type = "button";
 		addButton.classList.add("add-button");
 		addButton.addEventListener("click", () => {
-			if (input.value == 0 || levelInput.value == 0) return;
-			jobad.value += " * " + levelInput.value.replace("...", input.value) + "\n";
+			if ((input.value == 0 && !levelInput.value.includes("$")) || levelInput.value == 0) return;
+			jobad.value += " * " + levelInput.value.replace("§", input.value).replace("$", area.plural) + "\n";
 			input.value = 0;
 			levelInput.value = 0;
 		});
