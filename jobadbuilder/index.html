@@ -8,31 +8,35 @@
 		<style type="text/css">
 			.container {
 				border: 1px solid lightGray;
-				padding: 2% 8%;
+				padding: 2% 2%;
 				border-radius: 10px;
 				margin: 10px auto;
 				background: white;
 				max-width: 1900px;
 				max-width: 90vw;
-			}
-			.competence-select {
-				width: 30em;
-			}
-			.level-select {
-				width: 20em;
-			}
-			.competence-label {
-				min-width: 15em;
-				display: inline-block;
+				text-align: center;
 			}
 			#jobad {
-				min-width: 52em;
+				width: 90%;
 				min-height: 25em;
 				margin-top: 1em;
 				max-width: 95%;
 			}
 			#competenceContainer {
-				margin: 0.5em;
+				margin: 0 auto;
+				text-align: left;
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				max-width: min(70em, 90vw);
+			}
+			.competence-label {
+				display: inline-block;
+				white-space: nowrap;
+			}
+			/*.competence-select,	.competence-option {}*/
+			/*.level-select {}*/
+			.add-button {
+				width: 3em;
 			}
 		</style>
 
@@ -40,10 +44,8 @@
 	</head>
 	<body>
 		<div class="container">
-			<center>
-				<h1>HITO Job Ad Builder</h1>
-				<h2>Want to hire a Health IT professional? Create a job profile that fits.</h2>
-			</center>
+			<h1>HITO Job Ad Builder</h1>
+			<h2>Want to hire a Health IT professional? Create a job profile that fits.</h2>
 
 			<form base="http://hitontology.eu/ontology/" id="competenceForm">
 				<input name="pid" type="hidden" value="{rdfs:label}" />
@@ -51,10 +53,8 @@
 				<label>Position / Job title</label>
 				<input name="rdfs:label" type="literal" datatype="xsd:string" id="jobtitle" required />
 
-				<p>
-					<legend>Competence in...</legend>
-					<span id="competenceContainer"> </span>
-				</p>
+				<p><legend>Competence in...</legend></p>
+				<div id="competenceContainer"></div>
 			</form>
 			<textarea id="jobad"></textarea>
 			<button onclick="copy()">Copy</button>
