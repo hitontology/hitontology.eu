@@ -71,8 +71,8 @@ order: 5
 
 ---
 <center>
-  <a href="public/2022-03-30_HITO_Metamodel_complete_cardinalities.svg" target="_blank">
-    <img src="public/2022-03-30_HITO_Metamodel_complete_cardinalities.svg">
+  <a href="public/2022-05-hito_diagram.svg" target="_blank">
+    <img src="public/2022-05-hito_diagram.svg">
   </a>
   The HITO diagram
 </center>
