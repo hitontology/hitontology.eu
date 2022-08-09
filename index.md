@@ -11,13 +11,13 @@ order: 5
 <!--  -->
 <div class="flexy">
 <div class="flex-item">
-  <a title="Faceted Search" href="https://hitontology.eu/search/">Search for <br> evaluation <br> studies
+  <a title="Faceted Search" href="https://hitontology.eu/search/">Search studies
   <img title="Faceted Search" alt="Faceted Search" src="public/search.jpg">
 </a>
 </div>
 <div class="flex-item">
   <a title="Faceted Search" href="https://hitontology.eu/search/softwareproduct.html">
-  Search for MEDFLOSS and commercial products
+  Search software
   <img title="Faceted Search" alt="Faceted Search" src="public/search.jpg">
 </a>
 </div>
