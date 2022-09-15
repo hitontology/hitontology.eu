@@ -54,7 +54,7 @@ order: 5
 </a>
 </div>
 <div class="flex-item">
-<a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/hito.ttl">Download <br>
+<a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/ontology.ttl">Download <br>
 <img title="Download" alt="Download" src="public/download.png">
 </a>
 </div>
