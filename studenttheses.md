@@ -4,13 +4,14 @@ title: Student theses
 order: 32
 ---
 
-## in progress
-**Optimierung der Navigation in einer Ontologie für Anwendungssysteme und Softwareprodukte im Gesundheitswesen**<br>
+## 2022
+
+**<a href="public/studenttheses/Masterarbeit_Andreea_Somesan.pdf">Optimierung der Navigation in einer Ontologie zur Beschreibung von Anwendungssystemen und Softwareprodukten im Gesundheitswesen</a> (compressed version)**<br>
 **master thesis**<br>
 written by <a href="https://github.com/asomesan">Andreea Somesan</a><br>
-supervised by Konrad Höffner
+supervised by Konrad Höffner<br>
+<a href="https://github.com/asomesan/masterarbeit/releases/download/1.0/thesis.pdf">download uncompressed version (70 MB)</a>
 
-## 2022
 **<a href="public/studenttheses/Masterarbeit_Michelle_Bindel.pdf">Ein Katalog für Anwendungssystemtypen im Gesundheitswesen</a>**<br>
 **master thesis**<br>
 written by Michelle Bindel<br>
