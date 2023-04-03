@@ -6,29 +6,31 @@ order: 31
 <!-- use css for superduper collapsibles -->
 <link rel="stylesheet" href="public/css/collapse.css">
 ## Papers
-<!-- still under review
-<p align="center"><object width="100%" height="630" data="public/paper_vdornauer.pdf" frameborder="0" allowfullscreen></object></p>
+<p align="center"><object width="100%" height="630" data="public/paper_hitolod.pdf" frameborder="0" allowfullscreen></object></p>
 * Jahn F, Ammenwerth E, Dornauer V, Höffner K, Bindel M, Karopka T, Winter A
 **HITO – a Health IT Ontology: Using Linked Open Data to describe Libre/Free and Open Source Software**
-<p align="center"><a href="https://preprints.jmir.org/preprint/38861">Link</a></p>
+<p align="center"><a href="https://medinform.jmir.org/2023/1/e38861">Link</a></p>
 <div class="wrap-collapsible">
   <input id="collapsible0" class="toggle" type="checkbox">
   <label for="collapsible0" class="lbl-toggle">Open BibTeX</label>
   <div class="collapsible-content">
     <div class="content-inner">
       <p>
-        @article{hito_using_lod,<br>
-        author = {Jahn, Franziska and Ammenwerth, Elske and Dornauer, Verena and Höffner, Konrad and Bindel, Michelle and Karopka, Thomas and Winter, Alfred},<br>
-        year = {2022},<br>
-        month = {04},<br>
-        title = {HITO -- Health IT Ontology: Using Linked Open Data to describe Libre/Free and Open Source Software},<br>
-        journal = {JMIR Preprints. 19/04/2022:38861},<br>
+        @article{hitolod,<br>
+        author = {Jahn, Franziska and Ammenwerth, Elske and Dornauer, Verena and H{\o}ffner, Konrad and Bindel, Michelle and Karopka, Thomas and Winter, Alfred},<br>
+        year = {2023},<br>
+        month = {Jan},<br>
+        title = {A Linked Open Data-Based Terminology to Describe Libre/Free and Open-source Software: Incremental Development Study},<br>
+        journal = {JMIR Med Inform},<br>
+        pages = {e38861},<br>
+        volume = {11},<br>
+        doi = {10.2196/38861}<br>
         }
       </p>
     </div>
   </div>
 </div>
--->
+
 <p align="center"><object width="100%" height="630" data="public/paper_vdornauer.pdf" frameborder="0" allowfullscreen></object></p>
 * Dornauer V, Jahn F, Hoeffner K, Winter A, Ammenwerth E.
 **Use of Natural Language Processing for Precise Retrieval of Key Elements of Health IT Evaluation Studies.**
