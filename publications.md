@@ -9,6 +9,11 @@ order: 31
 <p align="center"><object width="100%" height="630" data="public/paper_hitolod.pdf" frameborder="0" allowfullscreen></object></p>
 * Jahn F, Ammenwerth E, Dornauer V, Höffner K, Bindel M, Karopka T, Winter A
 **HITO – a Health IT Ontology: Using Linked Open Data to describe Libre/Free and Open Source Software**
+JMIR Med Inform 2023;11:e38861
+URL: <https://medinform.jmir.org/2023/1/e38861>
+doi: [10.2196/38861](http://dx.doi.org/10.2196/38861)
+PMID: [36662569](https://www.ncbi.nlm.nih.gov/pubmed/36662569)
+
 <p align="center"><a href="https://medinform.jmir.org/2023/1/e38861">Link</a></p>
 <div class="wrap-collapsible">
   <input id="collapsible0" class="toggle" type="checkbox">
