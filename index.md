@@ -34,8 +34,8 @@ order: 5
 </a>
 </div>
 <div class="flex-item">
-  <a title="Glossary" href= "https://imise.github.io/glossar/hito/" target="_blank">Glossary
-  <img title="Glossary" alt="Glossary" src="public/browse.png">
+  <a title="Ontology Docs" href= "https://hitontology.github.io/hitontology.eu" target="_blank">Ontology Docs
+  <img title="Ontology Documentation" alt="Ontology Documentation" src="public/browse.png">
 </a>
 </div>
 <div class="flex-item">
@@ -56,6 +56,11 @@ order: 5
 <div class="flex-item">
 <a title="Download" href="https://raw.githubusercontent.com/hitontology/ontology/master/ontology.ttl">Download <br>
 <img title="Download" alt="Download" src="public/download.png">
+</a>
+</div>
+<div class="flex-item">
+  <a title="Glossary" href= "https://imise.github.io/glossar/hito/" target="_blank">Glossary
+  <img title="Glossary" alt="Glossary" src="public/browse.png">
 </a>
 </div>
 <div class="flex-item">
