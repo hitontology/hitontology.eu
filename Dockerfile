@@ -1,5 +1,5 @@
 # https://github.com/envygeeks/jekyll-docker did not work
-FROM ruby:3
+FROM ruby:3.2
 RUN gem install bundler
 COPY Gemfile .
 COPY Gemfile.lock .
