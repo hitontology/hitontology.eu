@@ -33,3 +33,6 @@ nbproject
 # Jekyll
 .jekyll-metadata
 .jekyll-cache/
+
+vendor
+.bundle
