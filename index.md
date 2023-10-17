@@ -34,7 +34,7 @@ order: 5
 </a>
 </div>
 <div class="flex-item">
-  <a title="Ontology Docs" href= "https://hitontology.github.io/hitontology.eu" target="_blank">Ontology Docs
+  <a title="Ontology Docs" href= "https://hitontology.github.io/ontology/" target="_blank">Ontology Docs
   <img title="Ontology Documentation" alt="Ontology Documentation" src="public/browse.png">
 </a>
 </div>
