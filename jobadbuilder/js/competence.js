@@ -147,7 +147,7 @@ export const COMPETENCE_AREAS = {
 	db: {
 		label: "Database System",
 		plural: "database systems",
-		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:DatabaseSystem; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:DatabaseManagementSystem; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
 		levels: [
 			["is interested in", "has basic knowledge of"],
 			["has advanced knowledge of", "has expert knowledge of"],
