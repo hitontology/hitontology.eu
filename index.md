@@ -32,6 +32,11 @@ order: 5
 <!--  -->
 <div class="flexy">
 <div class="flex-item">
+  <a title="Path search" href="https://hitontology.github.io/gui/">Path search
+  <img title="Path search" alt="Path search" src="public/search.jpg">
+</a>
+</div>
+<div class="flex-item">
   <a title="Faceted Search" href="https://hitontology.eu/search/">Search studies
   <img title="Faceted Search" alt="Faceted Search" src="public/search.jpg">
 </a>
