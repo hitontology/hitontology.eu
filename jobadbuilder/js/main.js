@@ -18,8 +18,8 @@ async function select(query, endpoint, graph) {
 					Object.keys(b).reduce((result, key) => {
 						result[key] = b[key].value;
 						return result;
-					}, {})
-				)
+					}, {}),
+				),
 			);
 		}
 		console.debug(query);
