@@ -1,6 +1,9 @@
 const ENDPOINT_HITO = "https://hitontology.eu/sparql";
 const ENDPOINT_SNIK = "https://www.snik.eu/sparql";
 
+const SOFTWARE_KEYS = ["ast", "interoperability", "programmingLanguage", "programmingLibrary", "language", "db", "feature", "enterpriseFunctionWhoDhi", "enterpriseFunctionBb", "userGroup", "organizationalUnit"];
+const COMPETENCE_KEYS = ["ast", "swp", "interoperability", "programmingLanguage", "programmingLibrary", "language", "db", "enterpriseFunction", "userGroup", "role"];
+
 // § in a level will be replaced with the chosen value in the text field.
 // * in a level can be used for both a single value and for the type in general
 // $ in a level is replaced with the type in general
@@ -84,7 +87,7 @@ export const COMPETENCE_AREAS = {
 		property: "hito:competencyInteroperability",
 	},
 	// use static HITO copy of relevant dbo:ProgrammingLanguage instances
-	programminglanguage: {
+	programmingLanguage: {
 		label: "Programming Language",
 		plural: "programming languages",
 		query: `SELECT ?x (STR(?label) AS ?l) {?x a <http://dbpedia.org/ontology/ProgrammingLanguage>; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
@@ -186,6 +189,30 @@ export const COMPETENCE_AREAS = {
 		property: "hito:competencyEfCla",
 		endpoint: ENDPOINT_HITO,
 	},
+	enterpriseFunctionWhoDhi: {
+		label: "Enterprise Function from WHO DHI catalogue",
+		plural: "enterprise functions",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; hito:fClaFrom hito:WhoDhiClientFeatureCatalogue; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		levels: null,
+		property: null,
+		endpoint: ENDPOINT_HITO,
+	},
+	enterpriseFunctionBb: {
+		label: "Enterprise Function from Blue Book catalogue",
+		plural: "enterprise functions",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; hito:fClaFrom hito:BbFeatureCatalogue; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		levels: null,
+		property: null,
+		endpoint: ENDPOINT_HITO,
+	},
+	feature: {
+		label: "Feature",
+		plural: "features",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		levels: null,
+		property: null,
+		endpoint: ENDPOINT_HITO,
+	},
 	userGroup: {
 		label: "User Group",
 		plural: "user groups",
@@ -200,6 +227,14 @@ export const COMPETENCE_AREAS = {
 		],
 		property: "hito:competencyUserCit",
 	},
+	organizationalUnit: {
+		label: "Organizational Unit",
+		plural: "organizational units",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:OrganizationalUnitClassified; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		levels: null,
+		property: null,
+		endpoint: ENDPOINT_HITO,
+	},
 	role: {
 		label: "Role",
 		//query: `SELECT ?x (STR(?label) AS ?l) FROM <http://www.snik.eu/ontology/bb> {?x a meta:Role; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
@@ -209,3 +244,6 @@ export const COMPETENCE_AREAS = {
 		endpoint: ENDPOINT_SNIK,
 	},
 };
+
+export const SOFTWARE_VALUES = SOFTWARE_KEYS.map((x) => COMPETENCE_AREAS[x]);
+export const COMPETENCE_VALUES = COMPETENCE_KEYS.map((x) => COMPETENCE_AREAS[x]);

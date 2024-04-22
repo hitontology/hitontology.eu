@@ -1,4 +1,4 @@
-import { COMPETENCE_AREAS } from "./competence.js";
+import { COMPETENCE_AREAS, SOFTWARE_VALUES, COMPETENCE_VALUES } from "./competence.js";
 
 async function select(query, endpoint, graph) {
 	if (!endpoint) endpoint = "https://hitontology.eu/sparql";
@@ -62,6 +62,7 @@ function levelSelect(area) {
 	levelInput.classList.add("level-select");
 	levelInput.append(emptyOption("Select competence level"));
 	for (let i = 0; i < 6; i++) {
+		if (!area.levels) console.error("no levels on area", area);
 		for (let level of area.levels[i]) {
 			let sublevels = [level];
 			if (level.includes("*")) sublevels = [level.replace("*", "§"), level.replace("*", "$")];
@@ -86,6 +87,7 @@ async function rowEles(area, useLevels) {
 	label.classList.add("competence-label");
 	const input = document.createElement("select");
 	input.classList.add("competence-select");
+	//input.setAttribute("multiple",true);
 	label.innerText = area.label;
 	input.append(emptyOption("Select " + area.label));
 
@@ -130,8 +132,17 @@ async function rowEles(area, useLevels) {
 }
 
 //<input name="hito:competency" type="resource" value="hito:Competency" arguments='{"pid":"{pid}"}' multiple />
-export async function main(useLevels) {
+async function main(values, useLevels) {
 	const container = document.getElementById("competenceContainer");
 	const text = document.getElementById("text");
-	(await Promise.all(Object.values(COMPETENCE_AREAS).map((area) => rowEles(area, useLevels)))).forEach((eles) => container.append(...eles));
+	(await Promise.all(values.map((area) => rowEles(area, useLevels)))).forEach((eles) => container.append(...eles));
+}
+
+export async function buildJobAd() {
+	console.log(COMPETENCE_VALUES);
+	await main(COMPETENCE_VALUES, true);
+}
+
+export async function describeSoftware() {
+	await main(SOFTWARE_VALUES, false);
 }

@@ -16,7 +16,7 @@
 			<form base="http://hitontology.eu/ontology/" id="competenceForm">
 				<input name="pid" type="hidden" value="{rdfs:label}" />
 
-				<label>Position / Job title</label>
+				<label>Software Product Name</label>
 				<input name="rdfs:label" type="literal" datatype="xsd:string" id="jobtitle" required />
 
 				<p><legend>Property...</legend></p>
@@ -27,8 +27,8 @@
 		</div>
 
 		<script type="module">
-			import { main } from "./js/main.js";
-			main(false);
+			import { describeSoftware } from "./js/main.js";
+			describeSoftware();
 		</script>
 	</body>
 </html>
