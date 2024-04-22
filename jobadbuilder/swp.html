@@ -3,49 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="" />
-		<meta name="author" content="" />
-		<style type="text/css">
-			.container {
-				border: 1px solid lightGray;
-				padding: 2% 2%;
-				border-radius: 10px;
-				margin: 10px auto;
-				background: white;
-				max-width: 1900px;
-				max-width: 90vw;
-				text-align: center;
-			}
-			#jobad {
-				width: 90%;
-				min-height: 25em;
-				margin-top: 1em;
-				max-width: 95%;
-			}
-			#competenceContainer {
-				margin: 0 auto;
-				text-align: left;
-				display: grid;
-				grid-template-columns: auto auto auto auto;
-				max-width: min(80em, 90vw);
-			}
-			.competence-label {
-				display: inline-block;
-				white-space: nowrap;
-			}
-			.competence-select,
-			.competence-option {
-				max-width: 35em;
-			}
-			.level-select,
-			.level-option {
-				max-width: 25em;
-			}
-			.add-button {
-				width: 3em;
-			}
-		</style>
-
+		<meta name="description" content="Health IT ontology software product describer" />
+		<meta name="author" content="Konrad Höffner" />
+		<link rel="stylesheet" href="css/main.css" />
 		<title>HITO Software Product Describer</title>
 	</head>
 	<body>
@@ -62,10 +22,13 @@
 				<p><legend>Property...</legend></p>
 				<div id="competenceContainer"></div>
 			</form>
-			<textarea id="jobad"></textarea>
+			<textarea id="text"></textarea>
 			<button onclick="copy()">Copy</button>
 		</div>
 
-		<script src="js/main.js" type="module"></script>
+		<script type="module">
+			import { main } from "./js/main.js";
+			main(false);
+		</script>
 	</body>
 </html>

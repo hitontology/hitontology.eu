@@ -41,11 +41,11 @@ const classes = {
 };
 
 function copy() {
-	const jobad = document.getElementById("jobad");
-	jobad.select();
-	jobad.setSelectionRange(0, 99999);
-	navigator.clipboard.writeText(jobad.value);
-	jobad.selectionStart = jobad.selectionEnd;
+	const text = document.getElementById("text");
+	text.select();
+	text.setSelectionRange(0, 99999);
+	navigator.clipboard.writeText(text.value);
+	text.selectionStart = text.selectionEnd;
 }
 
 function emptyOption(text) {
@@ -78,7 +78,10 @@ function levelSelect(area) {
 	return levelInput;
 }
 
-async function rowEles(area) {
+async function rowEles(area, useLevels) {
+	// describe a new product so we don't want to reference an existing one
+	if (!useLevels && area.label === "Software Product") return [];
+
 	const label = document.createElement("label");
 	label.classList.add("competence-label");
 	const input = document.createElement("select");
@@ -95,7 +98,8 @@ async function rowEles(area) {
 		option.innerText = b.l.value;
 		input.append(option);
 	}
-	const levelInput = levelSelect(area);
+	// when not using levels create an empty placeholder element to keep the grid layout intact
+	const levelInput = useLevels ? levelSelect(area) : document.createElement("span");
 
 	const addButton = document.createElement("button");
 	{
@@ -103,28 +107,31 @@ async function rowEles(area) {
 		addButton.type = "button";
 		addButton.classList.add("add-button");
 		addButton.addEventListener("click", () => {
-			if ((input.value == 0 && !levelInput.value.includes("$")) || levelInput.value == 0) return;
-			jobad.value += " * " + levelInput.value.replace("§", input.value).replace("$", area.plural) + "\n";
+			if (useLevels) {
+				if ((input.value == 0 && !levelInput.value.includes("$")) || levelInput.value == 0) return;
+				text.value += " * " + levelInput.value.replace("§", input.value).replace("$", area.plural) + "\n";
+				levelInput.value = 0;
+			} else {
+				if (input.value == 0) return;
+				text.value += " * " + area.label + ": " + input.value + "\n";
+			}
 			input.value = 0;
-			levelInput.value = 0;
 		});
 	}
 	const title = document.getElementById("jobtitle");
 	title.addEventListener("change", (event) => {
 		const newtitle = title.value;
 		if (newtitle == "") return;
-		const oldad = jobad.value;
-		jobad.value = newtitle + "\n" + oldad;
+		const oldad = text.value;
+		text.value = newtitle + "\n" + oldad;
 		title.value = "";
 	});
 	return [label, input, levelInput, addButton];
 }
 
 //<input name="hito:competency" type="resource" value="hito:Competency" arguments='{"pid":"{pid}"}' multiple />
-async function main() {
+export async function main(useLevels) {
 	const container = document.getElementById("competenceContainer");
-	const jobad = document.getElementById("jobad");
-	(await Promise.all(Object.values(COMPETENCE_AREAS).map((area) => rowEles(area)))).forEach((eles) => container.append(...eles));
+	const text = document.getElementById("text");
+	(await Promise.all(Object.values(COMPETENCE_AREAS).map((area) => rowEles(area, useLevels)))).forEach((eles) => container.append(...eles));
 }
-
-window.addEventListener("load", main);
