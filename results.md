@@ -9,5 +9,3 @@ order: 30
 * [Browse](https://hitontology.eu/ontology)
 * [Query](https://hitontology.eu/sparql)
 * [Search](https://hitontology.eu/search/)
-
-## Deliverables
