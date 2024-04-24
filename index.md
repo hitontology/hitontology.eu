@@ -7,6 +7,14 @@ order: 5
 <p class="lead">{{ site.description }}</p>
 
 ---
+## Introduction
+
+There is a variety of libre/free and open-source software (LIFOSS) products for medicine and health care.
+The Health Information Technology Ontology (HITO) allows describing those products, as well as studies evaluating them, systematically with a defined set of classes and their relationships.
+With the help of linked or integrated catalogues for languages, programming languages, licenses, features, and enterprise functions, the functionalities of LIFOSS can be precisely described and compared.
+We publish HITO and the LIFOSS descriptions as Linked Open Data (LOD); they can be queried and viewed using Semantic Web tools, such as an [Resource Description Framework (RDF) browser](https://hitontology.eu/ontology/), [SPARQL queries](https://hitontology.eu/sparql/), and different searches, to serve the use cases given below.
+
+---
 ## Describe Software
 
 <div class="flexy">
