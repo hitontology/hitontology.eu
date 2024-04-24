@@ -1,7 +1,25 @@
 const ENDPOINT_HITO = "https://hitontology.eu/sparql";
 const ENDPOINT_SNIK = "https://www.snik.eu/sparql";
 
-const SOFTWARE_KEYS = ["ast", "interoperability", "programmingLanguage", "programmingLibrary", "language", "db", "feature", "enterpriseFunctionWhoDhi", "enterpriseFunctionBb", "userGroup", "organizationalUnit"];
+const SOFTWARE_KEYS = [
+	"ast",
+	"enterpriseFunctionWhoDhi",
+	"enterpriseFunctionBb",
+	"featureBb",
+	"featureWhoDhi",
+	"featureJoshiPacs",
+	"userGroup",
+	"organizationalUnit",
+	"db",
+	//"certification", // we don't have any yet
+	"client",
+	"interoperability",
+	"language",
+	//"license", // we only have links to DBpedia, using that endpoint too would introduce too much uptime risk
+	"os",
+	"programmingLanguage",
+	"programmingLibrary",
+];
 const COMPETENCE_KEYS = ["ast", "swp", "interoperability", "programmingLanguage", "programmingLibrary", "language", "db", "enterpriseFunction", "userGroup", "role"];
 
 // § in a level will be replaced with the chosen value in the text field.
@@ -174,6 +192,24 @@ export const COMPETENCE_AREAS = {
 		property: "hito:competencyDb",
 		endpoint: ENDPOINT_HITO,
 	},
+	certification: {
+		label: "Certification",
+		plural: "certifications",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:Certification; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		endpoint: ENDPOINT_HITO,
+	},
+	client: {
+		label: "Client",
+		plural: "clients",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:Client; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		endpoint: ENDPOINT_HITO,
+	},
+	os: {
+		label: "Operating System",
+		plural: "operating systems",
+		query: `SELECT DISTINCT ?x (STR(?label) AS ?l) {?y hito:operatingSystem ?x. ?x rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		endpoint: ENDPOINT_HITO,
+	},
 	enterpriseFunction: {
 		label: "Enterprise Function",
 		plural: "enterprise functions",
@@ -192,25 +228,39 @@ export const COMPETENCE_AREAS = {
 	enterpriseFunctionWhoDhi: {
 		label: "Enterprise Function from WHO DHI catalogue",
 		plural: "enterprise functions",
-		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; hito:fClaFrom hito:WhoDhiClientFeatureCatalogue; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
-		levels: null,
-		property: null,
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:EnterpriseFunctionClassified; hito:efClaFrom [^rdfs:member hito:WhoDhi1-0]; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
 		endpoint: ENDPOINT_HITO,
 	},
 	enterpriseFunctionBb: {
-		label: "Enterprise Function from Blue Book catalogue",
+		//label: "Enterprise Function defined in chapter 6 'Architecture of Hospital Information Systems' in Blue Book edition 2 ",
+		label: "Enterprise Function from 'Health Information Systems, Technological and Management Perspectives'",
 		plural: "enterprise functions",
-		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; hito:fClaFrom hito:BbFeatureCatalogue; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
-		levels: null,
-		property: null,
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:EnterpriseFunctionClassified; hito:efClaFrom hito:BbFunctionCatalogue; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
 		endpoint: ENDPOINT_HITO,
 	},
 	feature: {
 		label: "Feature",
 		plural: "features",
 		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
-		levels: null,
-		property: null,
+		endpoint: ENDPOINT_HITO,
+	},
+	featureBb: {
+		//label: "Feature from Blue Book Architecture catalogue",
+		label: "Feature from 'Health Information Systems, Technological and Management Perspectives'",
+		plural: "features",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; hito:fClaFrom hito:BbFeatureCatalogue; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		endpoint: ENDPOINT_HITO,
+	},
+	featureWhoDhi: {
+		label: "Feature from WHO DHI catalogue",
+		plural: "features",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; hito:fClaFrom [^rdfs:member hito:WhoDhi1-0]; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
+		endpoint: ENDPOINT_HITO,
+	},
+	featureJoshiPacs: {
+		label: "Feature from 'PACS Administrators’ and Radiologists’ Perspective on the Importance of Features for PACS Selection'",
+		plural: "features",
+		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:FeatureClassified; hito:fClaFrom hito:JoshiPacsFeatureCatalogue; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
 		endpoint: ENDPOINT_HITO,
 	},
 	userGroup: {
@@ -231,8 +281,6 @@ export const COMPETENCE_AREAS = {
 		label: "Organizational Unit",
 		plural: "organizational units",
 		query: `SELECT ?x (STR(?label) AS ?l) {?x a hito:OrganizationalUnitClassified; rdfs:label ?label. FILTER(LANGMATCHES(LANG(?label),"en"))}`,
-		levels: null,
-		property: null,
 		endpoint: ENDPOINT_HITO,
 	},
 	role: {
@@ -245,5 +293,5 @@ export const COMPETENCE_AREAS = {
 	},
 };
 
-export const SOFTWARE_VALUES = SOFTWARE_KEYS.map((x) => COMPETENCE_AREAS[x]);
-export const COMPETENCE_VALUES = COMPETENCE_KEYS.map((x) => COMPETENCE_AREAS[x]);
+export const SOFTWARE_VALUES = SOFTWARE_KEYS.map((x) => COMPETENCE_AREAS[x] ?? console.error("Software key not found", x));
+export const COMPETENCE_VALUES = COMPETENCE_KEYS.map((x) => COMPETENCE_AREAS[x] ?? console.error("Competence key not found", x));
