@@ -110,12 +110,26 @@ async function rowEles(area, useLevels) {
 		addButton.classList.add("add-button");
 		addButton.addEventListener("click", () => {
 			if (useLevels) {
+				// code path for Job Ad Builder
 				if ((input.value == 0 && !levelInput.value.includes("$")) || levelInput.value == 0) return;
 				text.value += " * " + levelInput.value.replace("§", input.value).replace("$", area.plural) + "\n";
 				levelInput.value = 0;
 			} else {
+				// code path for Software Product Describer
 				if (input.value == 0) return;
-				text.value += " * " + area.label + ": " + input.value + "\n";
+				const prefix = " * " + area.label + ": ";
+				// Add to existing line.
+				// There could theoretically be edge cases that misdetect something due to string overlap.
+				// However a theoretically perfect solution would require refactoring the whole input process.
+				// So unless such an error actually occurs, use this string replacement based approach for now,
+				// as this is just a research prototype and not some mission critical software.
+				if (text.value.includes(prefix)) {
+					if (!text.value.includes(input.value)) {
+						text.value = text.value.replace(prefix, prefix + input.value + ", ");
+					}
+				}
+				// Does not exist yet, add new line.
+				else text.value += prefix + input.value + "\n";
 			}
 			input.value = 0;
 		});
