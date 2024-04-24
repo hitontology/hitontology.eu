@@ -40,7 +40,7 @@ const classes = {
 	},
 };
 
-function copy() {
+export function copy() {
 	const text = document.getElementById("text");
 	text.select();
 	text.setSelectionRange(0, 99999);
@@ -134,13 +134,14 @@ async function rowEles(area, useLevels) {
 			input.value = 0;
 		});
 	}
-	const title = document.getElementById("jobtitle");
+	const title = document.getElementById("title");
 	title.addEventListener("change", (event) => {
 		const newtitle = title.value;
 		if (newtitle == "") return;
 		const oldad = text.value;
 		text.value = newtitle + "\n" + oldad;
-		title.value = "";
+		//title.value = "";
+		return false; // don't clear title field
 	});
 	return [label, input, levelInput, addButton];
 }

@@ -15,22 +15,26 @@
 			<h1>HITO Software Product Describer</h1>
 			<h2>Systematically describe a Health IT software product.</h2>
 
-			<form base="http://hitontology.eu/ontology/" id="competenceForm">
+			<form base="http://hitontology.eu/ontology/" id="competenceForm" onSubmit="return false;">
 				<input name="pid" type="hidden" value="{rdfs:label}" />
 
 				<label>Software Product Name</label>
-				<input name="rdfs:label" type="literal" datatype="xsd:string" id="jobtitle" required />
+				<input name="rdfs:label" type="literal" datatype="xsd:string" id="title" required />
 
 				<p><legend>Property...</legend></p>
 				<div id="competenceContainer"></div>
 			</form>
 			<textarea id="text"></textarea>
-			<button onclick="copy()">Copy</button>
+			<button id="copy">Copy</button>
+			<button id="rdfexport">Add this software product to HITO</button>
 		</div>
 
 		<script type="module">
-			import { describeSoftware } from "./js/main.js";
+			import { describeSoftware, copy } from "./js/main.js";
+			import { rdfExport } from "./js/export.js";
 			describeSoftware();
+			document.getElementById("copy").addEventListener("click", copy);
+			document.getElementById("rdfexport").addEventListener("click", rdfExport);
 		</script>
 	</body>
 </html>
