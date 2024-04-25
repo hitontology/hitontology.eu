@@ -144,6 +144,7 @@ async function rowEles(area, useLevels) {
 async function main(values, useLevels) {
 	const container = document.getElementById("competenceContainer");
 	const text = document.getElementById("text");
+	text.value = ""; // browser may prefill with content from a previous time
 	const title = document.getElementById("title");
 	console.log("adding schmädding padding");
 	title.addEventListener("change", (event) => {
