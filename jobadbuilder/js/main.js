@@ -95,8 +95,8 @@ async function rowEles(area, useLevels) {
 	for (let b of bindings) {
 		const option = document.createElement("option");
 		option.classList.add("competence-option");
-		//option.value = b.x.value;
-		option.value = b.l.value;
+		option.value = b.x.value;
+		//option.value = b.l.value;
 		option.innerText = b.l.value;
 		input.append(option);
 	}
@@ -109,10 +109,11 @@ async function rowEles(area, useLevels) {
 		addButton.type = "button";
 		addButton.classList.add("add-button");
 		addButton.addEventListener("click", () => {
+			const label = input.options[input.selectedIndex].text;
 			if (useLevels) {
 				// code path for Job Ad Builder
 				if ((input.value == 0 && !levelInput.value.includes("$")) || levelInput.value == 0) return;
-				text.value += " * " + levelInput.value.replace("§", input.value).replace("$", area.plural) + "\n";
+				text.value += " * " + levelInput.value.replace("§", label).replace("$", area.plural) + "\n";
 				levelInput.value = 0;
 			} else {
 				// code path for Software Product Describer
@@ -123,13 +124,15 @@ async function rowEles(area, useLevels) {
 				// However a theoretically perfect solution would require refactoring the whole input process.
 				// So unless such an error actually occurs, use this string replacement based approach for now,
 				// as this is just a research prototype and not some mission critical software.
+				area.selected = area.selected || new Set();
+				area.selected.add(input.value);
 				if (text.value.includes(prefix)) {
-					if (!text.value.includes(input.value)) {
-						text.value = text.value.replace(prefix, prefix + input.value + ", ");
+					if (!text.value.includes(label)) {
+						text.value = text.value.replace(prefix, prefix + label + ", ");
 					}
 				}
 				// Does not exist yet, add new line.
-				else text.value += prefix + input.value + "\n";
+				else text.value += prefix + label + "\n";
 			}
 			input.value = 0;
 		});
