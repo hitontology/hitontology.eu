@@ -137,15 +137,6 @@ async function rowEles(area, useLevels) {
 			input.value = 0;
 		});
 	}
-	const title = document.getElementById("title");
-	title.addEventListener("change", (event) => {
-		const newtitle = title.value;
-		if (newtitle == "") return;
-		const oldad = text.value;
-		text.value = newtitle + "\n" + oldad;
-		//title.value = "";
-		return false; // don't clear title field
-	});
 	return [label, input, levelInput, addButton];
 }
 
@@ -153,6 +144,18 @@ async function rowEles(area, useLevels) {
 async function main(values, useLevels) {
 	const container = document.getElementById("competenceContainer");
 	const text = document.getElementById("text");
+	const title = document.getElementById("title");
+	console.log("adding schmädding padding");
+	title.addEventListener("change", (event) => {
+		event.preventDefault();
+		console.log("trigger");
+		const newtitle = title.value;
+		if (newtitle == "") return;
+		const oldad = text.value;
+		text.value = newtitle + "\n" + oldad;
+		//title.value = "";
+		//return false; // don't clear title field
+	});
 	(await Promise.all(values.map((area) => rowEles(area, useLevels)))).forEach((eles) => container.append(...eles));
 }
 
