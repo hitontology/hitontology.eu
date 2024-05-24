@@ -93,8 +93,8 @@ We publish HITO and the LIFOSS descriptions as Linked Open Data (LOD); they can 
 ## Diagrams
 
 <center>
-  <a href="public/2024-03-hito_diagram.svg" target="_blank">
-    <img src="public/2024-03-hito_diagram.svg">
+  <a href="public/2024-05-hito_diagram.svg" target="_blank">
+    <img src="public/2024-05-hito_diagram.svg">
   </a>
   The HITO diagram
 </center>
