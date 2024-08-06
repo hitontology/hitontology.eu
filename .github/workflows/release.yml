@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Build Changelog
         id: build-changelog
-        uses: mikepenz/release-changelog-builder-action@v4
+        uses: mikepenz/release-changelog-builder-action@v5
         with:
-          commitMode: true
+          mode: "COMMIT"
           configurationJson: |
             {
               "pr_template": "- #{{TITLE}}",
@@ -19,6 +19,6 @@ jobs:
             }
       - name: Create Release
         id: create-release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           body: ${{steps.build-changelog.outputs.changelog}}
