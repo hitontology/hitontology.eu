@@ -22,3 +22,5 @@ order: 35
 * <a href="{{ site.internal.database.admin }}" target="_blank">HITO Database Admin Interface</a>
 
 * <a href="{{ site.internal.database.schema }}" target="_blank">HITO Database Schema</a>
+
+* <a href="{{ site.internal.narrow }}" target="_blank">Narrow Diagram for Papers</a>
