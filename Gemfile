@@ -8,3 +8,5 @@ group :jekyll_plugins do
 end
 
 gem "json", "~> 2.7"
+
+gem "erb", "~> 4.0"
