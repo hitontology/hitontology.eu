@@ -68,7 +68,7 @@ We publish HITO and the LIFOSS descriptions as Linked Open Data (LOD); they can 
 
 <div class="flexy">
 <div class="flex-item">
-  <a title="Ontology Docs" href= "https://hitontology.github.io/ontology/" target="_blank">Ontology Docs
+  <a title="Ontology Docs" href= "https://hitontology.eu/gui" target="_blank">Ontology Docs
   <img title="Ontology Documentation" alt="Ontology Documentation" src="public/browse.png">
 </a>
 </div>
