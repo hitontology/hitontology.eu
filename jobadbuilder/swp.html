@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Health IT ontology software product describer" />
+		<meta name="author" content="Konrad Höffner" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../public/hito-apple-touch.png" />
+		<link rel="shortcut icon" href="../public/hito.png" />
+		<title>HITO Software Product Describer</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>HITO Software Product Describer</h1>
+			<h2>Systematically describe a Health IT software product.</h2>
+
+			<form base="http://hitontology.eu/ontology/" id="competenceForm" onSubmit="return false;">
+				<input name="pid" type="hidden" value="{rdfs:label}" />
+
+				<label>Software Product Name</label>
+				<input name="rdfs:label" type="literal" datatype="xsd:string" id="title" required />
+
+				<p><legend>Property...</legend></p>
+				<div id="competenceContainer"></div>
+			</form>
+			<textarea id="text"></textarea>
+			<button id="copy">Copy</button>
+			<button id="rdfexport">Add this software product to HITO</button>
+		</div>
+
+		<script type="module">
+			import { describeSoftware, copy } from "./js/main.js";
+			import { rdfExport } from "./js/export.js";
+			describeSoftware();
+			document.getElementById("copy").addEventListener("click", copy);
+			document.getElementById("rdfexport").addEventListener("click", rdfExport);
+		</script>
+	</body>
+</html>
