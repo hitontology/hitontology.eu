@@ -1,12 +1,12 @@
-# https://github.com/envygeeks/jekyll-docker did not work
-FROM ruby:3.2
+FROM ruby:3
+WORKDIR /src
 RUN gem install bundler
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install
-WORKDIR /usr/src/app
 COPY . .
+RUN bundle exec jekyll build
 
-EXPOSE 4000
-ENTRYPOINT ["bundle","exec","jekyll"]
-CMD ["serve","--incremental"]
+FROM pierrezemb/gostatic
+WORKDIR /srv/http
+COPY --from=0 /src/_site .
