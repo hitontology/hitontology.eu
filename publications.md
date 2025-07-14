@@ -5,6 +5,9 @@ order: 31
 ---
 <!-- use css for superduper collapsibles -->
 <link rel="stylesheet" href="public/css/collapse.css">
+
+Download all publications as <a href="public/hito.bib" target="_blank">BibTeX file for LaTeX</a> or <a href="public/hito.pdf">as PDF</a>.
+
 ## Papers
 <p align="center"><object width="100%" height="630" data="public/paper_hitolod.pdf" frameborder="0" allowfullscreen></object></p>
 * Jahn F, Ammenwerth E, Dornauer V, Höffner K, Bindel M, Karopka T, Winter A
