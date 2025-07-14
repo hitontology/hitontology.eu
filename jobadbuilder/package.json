@@ -1,0 +1,27 @@
+{
+	"name": "hitotools",
+	"version": "24.3-alpha",
+	"description": "HITO search interface",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"dev": "serve",
+		"fmt": "prettier -w . --cache",
+		"lint": "oxlint js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hitontology/gui.git"
+	},
+	"author": "Konrad Höffner",
+	"license": "CC0-1.0",
+	"bugs": {
+		"url": "https://github.com/hitontology/gui/issues"
+	},
+	"homepage": "https:///hitontology.eu/jobadbuilder",
+	"devDependencies": {
+		"oxlint": "^0.2.14",
+		"prettier": "^3.2.5",
+		"serve": "^14.2.1"
+	}
+}

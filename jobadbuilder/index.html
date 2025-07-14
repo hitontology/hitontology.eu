@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Health IT ontology job ad builder" />
+		<meta name="author" content="Konrad Höffner" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../public/hito-apple-touch.png" />
+		<link rel="shortcut icon" href="../public/hito.png" />
+		<title>HITO Job Ad Builder</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>HITO Job Ad Builder</h1>
+			<h2>Want to hire a Health IT professional? Create a job profile that fits.</h2>
+
+			<form base="http://hitontology.eu/ontology/" id="competenceForm" onSubmit="return false;">
+				<input name="pid" type="hidden" value="{rdfs:label}" />
+
+				<label>Position / Job title</label>
+				<input name="rdfs:label" type="literal" datatype="xsd:string" id="title" required />
+
+				<p><legend>Competence in...</legend></p>
+				<div id="competenceContainer"></div>
+			</form>
+			<textarea id="text"></textarea>
+			<button onclick="copy()">Copy</button>
+		</div>
+
+		<script type="module">
+			import { buildJobAd } from "./js/main.js";
+			buildJobAd();
+		</script>
+	</body>
+</html>
